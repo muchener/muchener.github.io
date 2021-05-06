@@ -148,6 +148,184 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-web-Burpsuite-SAML-plugin" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/05/23/web-Burpsuite-SAML-plugin/">Burpsuite SAML plugin</a>
+    </h1>
+  
+
+        
+        <a href="/2017/05/23/web-Burpsuite-SAML-plugin/" class="archive-article-date">
+  	<time datetime="2017-05-22T16:23:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-23</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+            
+        <p>Burpsuite 有测试SAML的插件——<a target="_blank" rel="noopener" href="https://github.com/SAMLRaider/SAMLRaider/releases/download/1.1.1/saml-raider-1.1.1.jar">SAML Raider</a>。</p>
+<p>该插件可以根据八种常规的XSW攻击方法插入恶意断言。<br><img src="/2017/05/23/web-Burpsuite-SAML-plugin/xsw.jpg"></p>
+<p>搭建VMware vsphere vcenter环境，抓包查看sso SAML签名格式如下：</p>
+<p><strong>此处有张图</strong></p>
+<p>这里post请求的参数是只是用了BASE64编码了的，而get请求则使用了压缩编码+BASE64编码。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">web</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/05/23/web-Burpsuite-SAML-plugin/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+<!-- 目录内容 -->
+             
+        <!-- 目录内容结束 -->
+
+  
+    <article id="post-web-On-Breaking-SAML-Be-Whoever-You-Want-to-Be" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/05/18/web-On-Breaking-SAML-Be-Whoever-You-Want-to-Be/">On Breaking SAML Be Whoever You Want to Be </a>
+    </h1>
+  
+
+        
+        <a href="/2017/05/18/web-On-Breaking-SAML-Be-Whoever-You-Want-to-Be/" class="archive-article-date">
+  	<time datetime="2017-05-18T15:54:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-18</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+            
+        <p>原文连接：<a target="_blank" rel="noopener" href="https://www.owasp.org/images/2/28/Breaking_SAML_Be_Whoever_You_Want_to_Be_-_Juraj_Somorovsky+Christian_Mainka.pdf">https://www.owasp.org/images/2/28/Breaking_SAML_Be_Whoever_You_Want_to_Be_-_Juraj_Somorovsky+Christian_Mainka.pdf</a></p>
+<p>翻译全：<a href="web-On-Breaking-SAML-Be-Whoever-You-Want-to-Be/On-Breaking-SAML-Be-Whoever-You-Want-to-Be.pdf">On-Breaking-SAML-Be-Whoever-You-Want-to-Be</a></p>
+<h1 id="打破SAML：成为任何你想成为的人"><a href="#打破SAML：成为任何你想成为的人" class="headerlink" title="打破SAML：成为任何你想成为的人"></a>打破SAML：成为任何你想成为的人</h1><h3 id="0-摘要"><a href="#0-摘要" class="headerlink" title="0 摘要"></a>0 摘要</h3><p>安全声明标记语言是一个被采用的语言，用于制作相关安全声明。它是开发联合身份部署和单点登录场景的关键组件。为了保护交换的SAML脚本工程的完整性和真实性，应用了XML签名标准。然而，签名验证算法比PKCS＃7这样的传统签名格式复杂得多。因此，在弱对抗模式下，通过应用不同的XML签名特定攻击，可以成功地规避完整性保护。</p>
+<p>在本文中，我们描述了对14个主要SAML框架的深入分析，并显示其中包括Salesforce，Shibboleth和IBM XS40 在内的其中11个具有关键的XML签名包装（XSW）漏洞。基于我们的分析，我们开发了一种用于XSW在SAML框架中的自动渗透测试工具。通过额外发现新的XSW变体证明了其可行性。我们提出了第一个分析这种攻击的框架，这是基于依赖方的两个组成部分之间的信息流。令人惊讶的是，这种分析还产生了有效和实用的对策。</p>
+<h3 id="1-介绍"><a href="#1-介绍" class="headerlink" title="1 介绍"></a>1 介绍</h3><p>安全声明标记语言（SAML）是一种基于XML的语言，用于制作关于主题的安全声明。SAML声明在WS-Security和基于REST的单点登录（SSO）场景中被用作安全令牌。主要软件供应商和开源项目都支持SAML，并被广泛部署。 由于其灵活性和广泛的支持，不断定义新的应用场景。</p>
+<p>SAML协议 由于SAML断言包含关于主题的安全关键声明，因此这些声明的有效性必须经过认证。 根据标准，这应该通过使用XML签名来实现，该签名应该覆盖完整的SAML断言或包含它的XML文档（例如，SAML验证响应）。</p>
+<p>然而，我们评估的大约80％的SAML框架可以通过用新的XML签名包装（XSW）攻击规避完整性保护来破坏。 这个令人惊讶的结果主要是由于两个事实：</p>
+<ul>
+<li>复杂签名算法：PKCS＃7和OpenPGP之前的数字签名数据格式计算整个文档的单个散列值，签名简单地附加到文档中。XML签名标准要复杂得多。 特别是签名和签名内容的位置是可变的。因此，存在同一XML文档的多种排列。</li>
+<li>未指定的内部接口：大多数SAML框架将依赖方（即，Web服务或网站使用SAML声明）视为单个块，假设所有任务都具有共同的共同状态。然而，逻辑上，该块必须被细分为执行加密操作的签名验证模块（后面称为RPsig），以及处理SAML中包含的声明的SAML处理模块（稍后称为RPclaims）。 两个模块对声明有不同的看法，它们通常只交换一个关于签名有效性的布尔值。</li>
+</ul>
+<h4 id="贡献"><a href="#贡献" class="headerlink" title="贡献"></a>贡献</h4><p>在本文中，我们对14个SAML框架和系统进行了深入的分析。在此分析中，我们在其中的11个框架中发现了XSW漏洞鉴于SAML在实践中的重要性，这一结果令人震惊，特别是由于SSO框架可能会成为一个单一的攻击点。 它清楚地表明，SAML和XML签名背后的安全隐患尚未被理解。</p>
+<p>第二，这些漏洞可以被攻击者所利用，方法远远少于基于传统网络加密技术的攻击：即使攻击者不控制网络也可能会成功。他不需要实时窃听，但可以利用那些SAML声明已过期的。单一签名的SAML足以完全危及SAML发行者/身份提供者。使用SSL/TLS加密SAML声明，从而防止对手通过拦截网络流量来学习声明，这也不利于：对手可能会在SAML发行人注册为普通客户，并可以使用自己的声明来冒充其他客户。</p>
+<p>第三，我们给出了考虑到RPsig和RPclaim之间的接口的SAML框架的第一个模型。 这个模型给出了对SAML的成功攻击的明确定义。除了它的理论兴趣之外，它也使我们能够证明几个积极的结果。这些结果是新的，有助于解释为什么一些框架不容易受到我们的攻击，并就如何提高其他11个框架的安全性提供建议。</p>
+<p>最后，我们展示XSW漏洞构成了一个重要而广泛的攻击向量。防范XSW攻击并不容易：因为与普遍的看法相反，即使是签署整个文件也不一定能够保护他们。要建立工作防御，需要更好地了解这个多功能的攻击类。 在研究过程中开发的一种专门用来测试XSW的工具将作为开放源码发布，以帮助您了解这一点。 通过在Salesforce SAML界面上发现一个新的攻击向量来证明其实用性，尽管已经应用了特定的应对措施。</p>
+<h4 id="责任公开"><a href="#责任公开" class="headerlink" title="责任公开"></a>责任公开</h4><p>我们分析过程中发现的所有漏洞均报告给负责的安全小组。因此，在许多情况下，我们与他们密切合作，以补救发现的问题。</p>
+<h4 id="大纲"><a href="#大纲" class="headerlink" title="大纲"></a>大纲</h4><p>本文的其余部分安排如下。第2节给出了SAML的高级概述，第3节增加了细节。 调查的方法在第4节中进行了说明，详细的结果在第5节中进行了说明。在第6节中，我们介绍了第一个对SAML进行全面自动化的XSW渗透测试工具。 第7节进行正式分析，并得出两个对策。在第8节，我们讨论他们的实际可行性。 第9节概述了相关工作。在最后一节，我们总结并提出未来的研究方向。</p>
+<p><img src="/2017/05/18/web-On-Breaking-SAML-Be-Whoever-You-Want-to-Be/1.png"></p>
+<p>图1：典型的单点登录方案：用户访问生成请求令牌的RP。 他将这个令牌重定向到IdP。 发出的令牌发送给用户并转发给RP。 即使通道由SSL / TLS保护，用户仍然可以看到令牌。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">web</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/05/18/web-On-Breaking-SAML-Be-Whoever-You-Want-to-Be/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+<!-- 目录内容 -->
+             
+        <!-- 目录内容结束 -->
+
+  
     <article id="post-po-2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -877,161 +1055,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2016/11/03/os-lfu/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-<!-- 目录内容 -->
-             
-        <!-- 目录内容结束 -->
-
-  
-    <article id="post-os-lru" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/11/03/os-lru/">操作系统LRU算法</a>
-    </h1>
-  
-
-        
-        <a href="/2016/11/03/os-lru/" class="archive-article-date">
-  	<time datetime="2016-11-03T14:30:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-            
-        <p>最近最久未使用页面淘汰法（LRU – Least Recently Used）：淘汰最近一段时间最久没访问的页面。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">#include &lt;stdlib.h&gt;</span><br><span class="line">//定义外存结构体</span><br><span class="line">typedef struct Extermal&#123;</span><br><span class="line">    int data;</span><br><span class="line">    struct Extermal* next;</span><br><span class="line">    </span><br><span class="line">&#125;Ex,*eNode;</span><br><span class="line">//定义内存结构体</span><br><span class="line">typedef struct Intermal&#123;</span><br><span class="line">    int data;//页号</span><br><span class="line">    int order;//进入顺序</span><br><span class="line">    struct Intermal* next;</span><br><span class="line">&#125;In, *iNode;</span><br><span class="line"></span><br><span class="line">//外存中页号输入</span><br><span class="line">eNode InputE(int n)</span><br><span class="line">&#123;</span><br><span class="line">    int data;</span><br><span class="line">    eNode p = NULL, t = NULL;</span><br><span class="line">    eNode eHead = (eNode)malloc((sizeof(Ex)));</span><br><span class="line">    if (NULL == eHead) &#123;</span><br><span class="line">        printf(&quot;error\n&quot;);</span><br><span class="line">        exit(EXIT_FAILURE);</span><br><span class="line">    &#125;</span><br><span class="line">    eHead-&gt;data = 0;</span><br><span class="line">    eHead-&gt;next = NULL;</span><br><span class="line">    t = eHead;</span><br><span class="line">    for (int i = 0; i &lt; n; i++) &#123;</span><br><span class="line">        p = (eNode)malloc((sizeof(Ex)));</span><br><span class="line">        if (NULL == p) &#123;</span><br><span class="line">            printf(&quot;error\n&quot;);</span><br><span class="line">            exit(EXIT_FAILURE);</span><br><span class="line">        &#125;</span><br><span class="line">        scanf(&quot;%d&quot;,&amp;data);</span><br><span class="line">        p-&gt;data = data;</span><br><span class="line">        p-&gt;next = NULL;</span><br><span class="line">        t-&gt;next = p;</span><br><span class="line">        t = p;</span><br><span class="line">    &#125;</span><br><span class="line">    return eHead;</span><br><span class="line">&#125;</span><br><span class="line">//根据内存页面大小创建内存</span><br><span class="line">iNode CreatiNode(int n)</span><br><span class="line">&#123;</span><br><span class="line">    iNode p = NULL, t = NULL;</span><br><span class="line">    iNode iHead = (iNode)malloc((sizeof(In)));</span><br><span class="line">    if (NULL == iHead) &#123;</span><br><span class="line">        printf(&quot;error\n&quot;);</span><br><span class="line">        exit(EXIT_FAILURE);</span><br><span class="line">    &#125;</span><br><span class="line">    iHead-&gt;data = -1;</span><br><span class="line">    iHead-&gt;next = NULL;</span><br><span class="line">    t = iHead;</span><br><span class="line">    for (int i = 0; i &lt; n; i++) &#123;</span><br><span class="line">        p = (iNode)malloc((sizeof(In)));</span><br><span class="line">        if (NULL == p) &#123;</span><br><span class="line">            printf(&quot;error\n&quot;);</span><br><span class="line">            exit(EXIT_FAILURE);</span><br><span class="line">        &#125;</span><br><span class="line">        p-&gt;data = -1;//把初始数据值置为-1</span><br><span class="line">        p-&gt;order = i;//初始顺序为1 2 3 ……</span><br><span class="line">        p-&gt;next = NULL;</span><br><span class="line">        t-&gt;next = p;</span><br><span class="line">        t = p;</span><br><span class="line">    &#125;</span><br><span class="line">    return iHead;</span><br><span class="line">&#125;</span><br><span class="line">//输出</span><br><span class="line">void Output(iNode iHead)</span><br><span class="line">&#123;</span><br><span class="line">    iNode pt = iHead-&gt;next;</span><br><span class="line">    while (pt != NULL) &#123;</span><br><span class="line">        if (pt-&gt;data == -1) &#123;</span><br><span class="line">            pt = pt-&gt;next;</span><br><span class="line">            continue;</span><br><span class="line">        &#125;</span><br><span class="line">        printf(&quot;%d &quot;,pt-&gt;data);</span><br><span class="line">        pt = pt-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">    printf(&quot;\n&quot;);</span><br><span class="line">&#125;</span><br><span class="line">int LRU_search(int data, iNode ihead, int m,int ni)</span><br><span class="line">&#123;</span><br><span class="line">    iNode pt = ihead-&gt;next;</span><br><span class="line">    int flag = 0;//监控是否存在置换</span><br><span class="line">    int temp = 0;</span><br><span class="line">    while (pt != NULL) &#123;</span><br><span class="line">        if (pt-&gt;data == data) &#123;</span><br><span class="line">            flag = 1;</span><br><span class="line">            temp = pt-&gt;order;</span><br><span class="line">            pt-&gt;order = ni;</span><br><span class="line">            break;</span><br><span class="line">        &#125;</span><br><span class="line">        pt = pt-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">    pt = ihead-&gt;next;</span><br><span class="line">    //存在置换，m计数器+1</span><br><span class="line">    if (flag == 0) &#123;</span><br><span class="line">        m++;</span><br><span class="line">        //刷新页面顺序，最新置换的页面为页面最大数，确保下次置换掉的事order=0的页面</span><br><span class="line">        while (pt != NULL) &#123;</span><br><span class="line">            if (pt-&gt;order == 0) &#123;</span><br><span class="line">                pt-&gt;data = data;</span><br><span class="line">                pt-&gt;order = ni -1;</span><br><span class="line">            &#125;</span><br><span class="line">            else&#123;</span><br><span class="line">                pt-&gt;order --;</span><br><span class="line">            &#125;</span><br><span class="line">            pt = pt-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    //不存在页面置换时，更新页面最近访问</span><br><span class="line">    else</span><br><span class="line">    &#123;</span><br><span class="line">        while (pt != NULL) &#123;</span><br><span class="line">            if (pt-&gt;order&gt;temp) &#123;</span><br><span class="line">                pt-&gt;order--;</span><br><span class="line">            &#125;</span><br><span class="line">            pt = pt-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return m;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int LRU_run(eNode eHead, iNode ihead,int m,int ni)</span><br><span class="line">&#123;</span><br><span class="line">    eNode pt = eHead-&gt;next;</span><br><span class="line">    int no = 0;</span><br><span class="line">    while (pt != NULL) &#123;</span><br><span class="line">        m = LRU_search(pt-&gt;data,ihead,m,ni);</span><br><span class="line">        printf(&quot;%d:页面%d置换:&quot;,no++,pt-&gt;data);</span><br><span class="line">        Output(ihead);</span><br><span class="line">        pt = pt-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">    return m;</span><br><span class="line">&#125;</span><br><span class="line">void LRU()</span><br><span class="line">&#123;</span><br><span class="line">    eNode eHead;</span><br><span class="line">    iNode iHead;</span><br><span class="line">    int ne,ni,m = 0;</span><br><span class="line">    //输入外存</span><br><span class="line">    printf(&quot;输入外存中存储个数：\n&quot;);</span><br><span class="line">    scanf(&quot;%d&quot;,&amp;ne);</span><br><span class="line">    printf(&quot;分别输入所需要的页面，以空格分开\n&quot;);</span><br><span class="line">    eHead = InputE(ne);</span><br><span class="line">    //创建内存</span><br><span class="line">    printf(&quot;输入内存中有页面的个数\n&quot;);</span><br><span class="line">    scanf(&quot;%d&quot;,&amp;ni);</span><br><span class="line">    iHead = CreatiNode(ni);</span><br><span class="line">    m = LRU_run(eHead, iHead, m,ni);</span><br><span class="line">    printf(&quot;缺页率为：%f\n&quot;,(float)m/ne);</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main(int argc, const char * argv[]) &#123;</span><br><span class="line">    LRU();</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">os</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/11/03/os-lru/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-<!-- 目录内容 -->
-             
-        <!-- 目录内容结束 -->
-
-  
-    <article id="post-os-fifo" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/11/03/os-fifo/">操作系统FIFO算法</a>
-    </h1>
-  
-
-        
-        <a href="/2016/11/03/os-fifo/" class="archive-article-date">
-  	<time datetime="2016-11-03T04:27:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-            
-        <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">#include &lt;stdlib.h&gt;</span><br><span class="line">//定义外存结构体</span><br><span class="line">typedef struct Extermal&#123;</span><br><span class="line">    int data;</span><br><span class="line">    struct Extermal* next;</span><br><span class="line">    </span><br><span class="line">&#125;Ex,*eNode;</span><br><span class="line">//定义内存结构体</span><br><span class="line">typedef struct Intermal&#123;</span><br><span class="line">    int data;//页号</span><br><span class="line">    int order;//进入顺序</span><br><span class="line">    struct Intermal* next;</span><br><span class="line">&#125;In, *iNode;</span><br><span class="line"></span><br><span class="line">//外存中页号输入</span><br><span class="line">eNode InputE(int n)</span><br><span class="line">&#123;</span><br><span class="line">    int data;</span><br><span class="line">    eNode p = NULL, t = NULL;</span><br><span class="line">    eNode eHead = (eNode)malloc((sizeof(Ex)));</span><br><span class="line">    if (NULL == eHead) &#123;</span><br><span class="line">        printf(&quot;error\n&quot;);</span><br><span class="line">        exit(EXIT_FAILURE);</span><br><span class="line">    &#125;</span><br><span class="line">    eHead-&gt;data = 0;</span><br><span class="line">    eHead-&gt;next = NULL;</span><br><span class="line">    t = eHead;</span><br><span class="line">    for (int i = 0; i &lt; n; i++) &#123;</span><br><span class="line">        p = (eNode)malloc((sizeof(Ex)));</span><br><span class="line">        if (NULL == p) &#123;</span><br><span class="line">            printf(&quot;error\n&quot;);</span><br><span class="line">            exit(EXIT_FAILURE);</span><br><span class="line">        &#125;</span><br><span class="line">        scanf(&quot;%d&quot;,&amp;data);</span><br><span class="line">        p-&gt;data = data;</span><br><span class="line">        p-&gt;next = NULL;</span><br><span class="line">        t-&gt;next = p;</span><br><span class="line">        t = p;</span><br><span class="line">    &#125;</span><br><span class="line">    return eHead;</span><br><span class="line">&#125;</span><br><span class="line">//根据内存页面大小创建内存</span><br><span class="line">iNode CreatiNode(int n)</span><br><span class="line">&#123;</span><br><span class="line">    iNode p = NULL, t = NULL;</span><br><span class="line">    iNode iHead = (iNode)malloc((sizeof(In)));</span><br><span class="line">    if (NULL == iHead) &#123;</span><br><span class="line">        printf(&quot;error\n&quot;);</span><br><span class="line">        exit(EXIT_FAILURE);</span><br><span class="line">    &#125;</span><br><span class="line">    iHead-&gt;data = -1;</span><br><span class="line">    iHead-&gt;next = NULL;</span><br><span class="line">    t = iHead;</span><br><span class="line">    for (int i = 0; i &lt; n; i++) &#123;</span><br><span class="line">        p = (iNode)malloc((sizeof(In)));</span><br><span class="line">        if (NULL == p) &#123;</span><br><span class="line">            printf(&quot;error\n&quot;);</span><br><span class="line">            exit(EXIT_FAILURE);</span><br><span class="line">        &#125;</span><br><span class="line">        p-&gt;data = -1;//把初始数据值置为-1</span><br><span class="line">        p-&gt;order = i;//初始顺序为1 2 3 ……</span><br><span class="line">        p-&gt;next = NULL;</span><br><span class="line">        t-&gt;next = p;</span><br><span class="line">        t = p;</span><br><span class="line">    &#125;</span><br><span class="line">    return iHead;</span><br><span class="line">&#125;</span><br><span class="line">//输出</span><br><span class="line">void Output(iNode iHead)</span><br><span class="line">&#123;</span><br><span class="line">    iNode pt = iHead-&gt;next;</span><br><span class="line">    while (pt != NULL) &#123;</span><br><span class="line">        if (pt-&gt;data == -1) &#123;</span><br><span class="line">            pt = pt-&gt;next;</span><br><span class="line">            continue;</span><br><span class="line">        &#125;</span><br><span class="line">        printf(&quot;%d &quot;,pt-&gt;data);</span><br><span class="line">        pt = pt-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">    printf(&quot;\n&quot;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int FIFO_search(int data, iNode ihead, int m,int ni)</span><br><span class="line">&#123;</span><br><span class="line">    iNode pt = ihead-&gt;next;</span><br><span class="line">    int flag = 0;//监控是否存在置换</span><br><span class="line">    while (pt != NULL) &#123;</span><br><span class="line">        if (pt-&gt;data == data) &#123;</span><br><span class="line">            flag = 1;</span><br><span class="line">            break;</span><br><span class="line">        &#125;</span><br><span class="line">        pt = pt-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">    //存在置换时，将order为1的页面置换掉，然后将这个order置为页面数，然后其他order-1</span><br><span class="line">    if (flag == 0) &#123;</span><br><span class="line">        m++;</span><br><span class="line">        pt = ihead-&gt;next;</span><br><span class="line">        while (pt != NULL) &#123;</span><br><span class="line">            if (pt-&gt;order == 0) &#123;</span><br><span class="line">                pt-&gt;data = data;</span><br><span class="line">                pt-&gt;order = ni -1;</span><br><span class="line">            &#125;</span><br><span class="line">            else&#123;</span><br><span class="line">                pt-&gt;order --;</span><br><span class="line">            &#125;</span><br><span class="line">            pt = pt-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return m;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int FIFO_run(eNode eHead, iNode ihead,int m,int ni)</span><br><span class="line">&#123;</span><br><span class="line">    eNode pt = eHead-&gt;next;</span><br><span class="line">    int no = 0;</span><br><span class="line">    while (pt != NULL) &#123;</span><br><span class="line">        m = FIFO_search(pt-&gt;data,ihead,m,ni);</span><br><span class="line">        printf(&quot;%d:页面%d置换:&quot;,no++,pt-&gt;data);</span><br><span class="line">        Output(ihead);</span><br><span class="line">        pt = pt-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">    return m;</span><br><span class="line">&#125;</span><br><span class="line">void FIFO()</span><br><span class="line">&#123;</span><br><span class="line">    eNode eHead;</span><br><span class="line">    iNode iHead;</span><br><span class="line">    int ne,ni,m = 0;</span><br><span class="line">    //输入外存</span><br><span class="line">    printf(&quot;输入外存中存储个数：\n&quot;);</span><br><span class="line">    scanf(&quot;%d&quot;,&amp;ne);</span><br><span class="line">    printf(&quot;分别输入所需要的页面，以空格分开\n&quot;);</span><br><span class="line">    eHead = InputE(ne);</span><br><span class="line">    //创建内存</span><br><span class="line">    printf(&quot;输入内存中有页面的个数\n&quot;);</span><br><span class="line">    scanf(&quot;%d&quot;,&amp;ni);</span><br><span class="line">    iHead = CreatiNode(ni);</span><br><span class="line">    m = FIFO_run(eHead, iHead, m,ni);</span><br><span class="line">    printf(&quot;缺页率为：%f\n&quot;,(float)m/ne);</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main(int argc, const char * argv[]) &#123;</span><br><span class="line">    FIFO();</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">os</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/11/03/os-fifo/">展开全文 >></a>
         </p>
       
 
