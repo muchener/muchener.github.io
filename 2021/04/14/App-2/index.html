@@ -8,15 +8,23 @@
   <link rel="dns-prefetch" href="http://www.6do0.cn">
   <title>muchener&#39;s blogs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一个什么都梦想的妹子！">
-<meta property="og:type" content="website">
+  <meta name="description" content="App安全合规的思考—part2 当前监管的重点变化梳理 APP安全认证的工作流程梳理 （点链接查看） 当前监管的重点变化梳理(下文)  0 前言关于App安全合规的监管要求很多地方都可以找到，这里就不一一赘述了。本文的重点内容是通过对监管机构发出来的通报进行统计分析，解读监管走向。 嗯哼，想要解读监管走向，首先就要了解现在都有哪些监管机构：  App违法违规收集使用个人信息治理工作组（App治理">
+<meta property="og:type" content="article">
 <meta property="og:title" content="muchener&#39;s blogs">
-<meta property="og:url" content="http://www.6do0.cn/page/5/index.html">
+<meta property="og:url" content="http://www.6do0.cn/2021/04/14/App-2/index.html">
 <meta property="og:site_name" content="muchener&#39;s blogs">
-<meta property="og:description" content="一个什么都梦想的妹子！">
+<meta property="og:description" content="App安全合规的思考—part2 当前监管的重点变化梳理 APP安全认证的工作流程梳理 （点链接查看） 当前监管的重点变化梳理(下文)  0 前言关于App安全合规的监管要求很多地方都可以找到，这里就不一一赘述了。本文的重点内容是通过对监管机构发出来的通报进行统计分析，解读监管走向。 嗯哼，想要解读监管走向，首先就要了解现在都有哪些监管机构：  App违法违规收集使用个人信息治理工作组（App治理">
 <meta property="og:locale">
+<meta property="og:image" content="http://www.6do0.cn/2021/04/14/App-2/1.jpg">
+<meta property="og:image" content="http://www.6do0.cn/2021/04/14/App-2/image-20210419163850495.png">
+<meta property="og:image" content="http://www.6do0.cn/2021/04/14/App-2/2.png">
+<meta property="og:image" content="http://www.6do0.cn/2021/04/14/App-2/6291618832498_.png">
+<meta property="og:image" content="http://www.6do0.cn/2021/04/14/App-2/1.png">
+<meta property="article:published_time" content="2021-04-14T04:54:04.195Z">
+<meta property="article:modified_time" content="2021-05-06T09:46:58.127Z">
 <meta property="article:author" content="暮晨儿">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://www.6do0.cn/2021/04/14/App-2/1.jpg">
   
     <link rel="alternative" href="/atom.xml" title="muchener&#39;s blogs" type="application/atom+xml">
   
@@ -146,439 +154,72 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-web-how-to-use-nmap" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-App-2" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/06/02/web-how-to-use-nmap/">nmap的使用</a>
-    </h1>
-  
-
-        
-        <a href="/2016/06/02/web-how-to-use-nmap/" class="archive-article-date">
-  	<time datetime="2016-06-02T15:20:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-06-02</time>
-</a>
-        
-      </header>
     
     <div class="article-entry" itemprop="articleBody">
             
-        <p>全面扫描</p>
-<blockquote>
-<p>nmap -A 192.168.1.2</p>
+        <h1 id="App安全合规的思考—part2-当前监管的重点变化梳理"><a href="#App安全合规的思考—part2-当前监管的重点变化梳理" class="headerlink" title="App安全合规的思考—part2 当前监管的重点变化梳理"></a>App安全合规的思考—part2 当前监管的重点变化梳理</h1><ol>
+<li><a target="_blank" rel="noopener" href="https://www.freebuf.com/articles/compliance/269309.html">APP安全认证的工作流程梳理</a> （点链接查看）</li>
+<li>当前监管的重点变化梳理(下文)</li>
+</ol>
+<h2 id="0-前言"><a href="#0-前言" class="headerlink" title="0 前言"></a>0 前言</h2><p>关于App安全合规的监管要求很多地方都可以找到，这里就不一一赘述了。本文的重点内容是通过对监管机构发出来的通报进行统计分析，解读监管走向。</p>
+<p>嗯哼，想要解读监管走向，首先就要了解现在都有哪些监管机构：</p>
+<ol>
+<li>App违法违规收集使用个人信息治理工作组（App治理小组）</li>
+<li> 工业和信息化部信息通信管理局（工信部）</li>
+<li>国家移动互联网应用安全管理中心（病毒中心）</li>
+<li>地方通管局（如广东省通管局、天津通管局等）</li>
+<li>地方网安（主要关注公司所属地的，当然也不排除有跨地域通报的情况呀）</li>
+</ol>
+<h2 id="1-通报情况"><a href="#1-通报情况" class="headerlink" title="1 通报情况"></a>1 通报情况</h2><blockquote>
+<p>App治理小组发布的问题详情是监管机构里列举的很清晰的了，所以下文大部分以app治理小组通报的问题为基础进行统计分析。</p>
 </blockquote>
-<p>扫描整个子网</p>
-<blockquote>
-<p>nmap 192.168.1.0/24</p>
-</blockquote>
-<p>扫描指定段(192.168.1.1-192.168.1.200内的所有主机)</p>
-<blockquote>
-<p>nmap 192.168.1.1-200</p>
-</blockquote>
-<p>扫描主机上的特定端口</p>
-<blockquote>
-<p>nmap -p80,21 192.168.1.1</p>
-</blockquote>
-<p>-sS—–Tcp SYN Scan 半开放扫描，不需要通过完整的握手就能获得远程主机的信息。</p>
-<blockquote>
-<p>Nmap发送一个SYN包请求连接，如果收到RST包表示无法连接到主机，如果收到SYN/ACk包，Nmap向目标端口发放并向主机发送一个RST包结束连接。</p>
-</blockquote>
-<blockquote>
-<p>nmap -sS 192.168.1.1</p>
-</blockquote>
-<p>-sT—–Tcp connect()scan当SYN扫描不能使用时使用，找出目标主机使用的TCP端口。</p>
-<blockquote>
-<p>Nmap发送一个SYN包请求连接，如果收到RST包表示无法连接到主机，如果收到SYN/ACk包，Nmap向目标端口发送一个ACK包确认连接，则确定目标端口开放</p>
-</blockquote>
-<blockquote>
-<p>nmap -sT 192.168.1.1</p>
-</blockquote>
-<p>-sU—–Udp scan</p>
-<blockquote>
-<p>找出目标主机打开的UDP端口。</p>
-</blockquote>
-<blockquote>
-<p>UDP扫描发送UDP数据包到目标端口，并等待响应,如果返回ICMP不可达的错误消息，说明端口是关闭的，如果得到正确的适当的回应，说明端口是开放的.</p>
-</blockquote>
-<blockquote>
-<p>nmap -sU 192.168.1.1</p>
-</blockquote>
-<p>-T  （0-5）时序选择，默认T3。</p>
-<p>-sN Null扫描</p>
-<blockquote>
-<p>通过发送非常规的TCP数据包进行探测，收到RST数据包说明端口关闭，若端口开放则不会接收到任何响应消息。</p>
-</blockquote>
-<p>-sF FIN扫描</p>
-<blockquote>
-<p>当使用TCP SYN扫描可能会被目标主机的防火墙发现，会阻止SYN数据包，这时候使用TCP FIN扫描并不需要完成TCP握手。</p>
-</blockquote>
-<blockquote>
-<p>FIN扫描：向目标端口发送一个TCP FIN 包，如果收到目标响应的RST包，则说明端口开放。</p>
-</blockquote>
-<p>-sX Xmas扫描</p>
-<blockquote>
-<p>如果目标端口发放，返回一个RST包。</p>
-</blockquote>
-<p>-sP  PING</p>
-<blockquote>
-<p>只用来找出主机是否存在网络中，不用来发现是否开放端口。</p>
-</blockquote>
-<p>-sA TCPACK扫描</p>
-<p>-sW TCP窗口扫描</p>
-<blockquote>
-<p>开放端口用整数表示窗口的大小，关闭窗口的端口大小为0。</p>
-</blockquote>
-<p>-sM TCPMainon扫描</p>
-<p>-sI 空闲扫描</p>
-<blockquote>
-<p>不使用自己的ip向目标主机发送数据包，可以利用不活跃的僵尸主机反弹给攻击者一个旁路信道，从而进行端口扫描。IDS会把不活跃的将是主机当做攻击者。</p>
-</blockquote>
-<p>-sO 协议扫描</p>
-<p>-sV 版本探测</p>
-<blockquote>
-<p>通过相应的端口对应的服务判断软件版本</p>
-</blockquote>
-<p>-D IP欺骗</p>
-<blockquote>
-<p>nmap -D RND：n 192.168.1.1</p>
-</blockquote>
-<p>–spoof-mac  MAC地址欺骗</p>
-<blockquote>
-<p>nmap -sT -PN –spoof-mac 0 192.168.1.1</p>
-</blockquote>
-<p>–script</p>
-<blockquote>
-<p>nmap –script=XXXX 192.168.1.1</p>
-</blockquote>
-<blockquote>
-<p>nmap -sU -sS –script=smb-check-vulns-MS08-067.nse –script-args=unsafe=1 -p U:137,T:139,445 1.1.1.1    Windows Server服务RPC请求缓冲区溢出漏洞</p>
-</blockquote>
-<blockquote>
-<p>ms10-061</p>
-</blockquote>
-<blockquote>
-<p>nmap -p445 –script=smb-enum-shares.nse –script-args=smbuser=admin,smbpassword=pass 1.1.1.1   枚举共享</p>
-</blockquote>
-<blockquote>
-<p>nmap –script=smb-brute –script-args=userdb=usernames.txt,passdb=password.txt 对指定用户名和密码进行破解</p>
-</blockquote>
-<p>作为一个没有实践过的的人，只能说是学习了。。。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">web</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/06/02/web-how-to-use-nmap/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-<!-- 目录内容 -->
-             
-        <!-- 目录内容结束 -->
-
-  
-    <article id="post-wchat-1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/05/23/wchat-1/">微信公众号实现快递查询功能</a>
-    </h1>
-  
-
-        
-        <a href="/2016/05/23/wchat-1/" class="archive-article-date">
-  	<time datetime="2016-05-23T15:32:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-05-23</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-            
-        <p>我感觉现在自己学的越来越杂了，今天为了写开放性实验作业，撸起袖子改代码了。本以为可以直接抄的，但是感觉太没有含金量了，至少有那么一点点是自己写的吧，于是就写了一个微信公众号查询快递的功能，当然了，由于我是个php小白（连小白都不算），就只好照葫芦画瓢，写了一个差不多可以用的。网上的方培的那个连的是快递100的接口，申请还要idkey，还要把自己的网站上连接他的友情链接，你想的也太美了，老子不干了，还是快递api(<a target="_blank" rel="noopener" href="http://www.kuaidiapi.cn/)%E8%BF%99%E4%B8%AA%E7%BD%91%E7%AB%99%E5%BE%88%E5%92%8C%E8%94%BC%E5%8F%AF%E4%BA%B2%E4%BA%86%EF%BC%8C%E7%9B%B4%E6%8E%A5%E6%B3%A8%E5%86%8C%E8%B4%A6%E5%8F%B7%E5%B0%B1%E5%8F%AF%E4%BB%A5%E4%BA%86%E3%80%82">http://www.kuaidiapi.cn/)这个网站很和蔼可亲了，直接注册账号就可以了。</a></p>
-<p>注册账号成功后，可以看到自己的UID，key，将它们分别填入下图的1,2位置,3的位置为运单号，4的位置为快递公司代码(例如：申通就是shentong)</p>
-<p><img src="/2016/05/23/wchat-1/weixin1-768x116.png"></p>
-<p>根据API文档返回参数说明</p>
-<p><img src="/2016/05/23/wchat-1/weixin2-768x498.png"></p>
-<p>注意这里data是一个dict。</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">【kuaidi.php】</span><br><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"> <span class="function"><span class="keyword">function</span> <span class="title">kuaidi</span>(<span class="params"><span class="variable">$keyword</span></span>)</span></span><br><span class="line"><span class="function"> </span>&#123;</span><br><span class="line">     <span class="variable">$word</span> = explode(<span class="string">&quot;+&quot;</span>,<span class="variable">$keyword</span>);</span><br><span class="line">     <span class="variable">$number</span> = <span class="variable">$word</span>[<span class="number">1</span>];</span><br><span class="line">     <span class="variable">$name</span> = <span class="variable">$word</span>[<span class="number">0</span>];</span><br><span class="line">     <span class="variable">$url</span> = <span class="string">&quot;http://www.kuaidiapi.cn/rest/?uid=&quot;</span>XXXX<span class="string">&quot;&amp;key=&quot;</span>xxxxxxxxxxxx<span class="string">&quot;&amp;order=&quot;</span>.<span class="variable">$number</span>.<span class="string">&quot;&amp;id=&quot;</span>.<span class="variable">$name</span>;</span><br><span class="line">     <span class="variable">$ch</span> = curl_init();</span><br><span class="line">     curl_setopt(<span class="variable">$ch</span>, CURLOPT_URL, <span class="variable">$url</span>);</span><br><span class="line">     curl_setopt(<span class="variable">$ch</span>, CURLOPT_RETURNTRANSFER, <span class="number">1</span>);</span><br><span class="line">     <span class="variable">$output</span> = curl_exec(<span class="variable">$ch</span>);</span><br><span class="line">     <span class="keyword">if</span> (curl_error(<span class="variable">$ch</span>)) &#123;</span><br><span class="line">         <span class="keyword">echo</span> <span class="string">&#x27;error code:&#x27;</span> .curl_errno(<span class="variable">$ch</span>).<span class="string">&#x27;reason:&#x27;</span>.curl_error(<span class="variable">$ch</span>);</span><br><span class="line">     &#125;</span><br><span class="line">     curl_close(<span class="variable">$ch</span>);</span><br><span class="line">     <span class="variable">$AllInfo</span> = json_decode(<span class="variable">$output</span>,<span class="literal">true</span>);</span><br><span class="line">     </span><br><span class="line">     <span class="keyword">if</span> (<span class="variable">$AllInfo</span>[<span class="string">&#x27;message&#x27;</span>] != <span class="string">&quot;&quot;</span>)&#123;</span><br><span class="line">         <span class="keyword">return</span> <span class="variable">$AllInfo</span>[<span class="string">&#x27;message&#x27;</span>];</span><br><span class="line">     &#125;</span><br><span class="line">     <span class="keyword">else</span></span><br><span class="line">     &#123;</span><br><span class="line">         <span class="variable">$result</span> = <span class="string">&quot;&quot;</span>;</span><br><span class="line">         <span class="keyword">foreach</span> (<span class="variable">$AllInfo</span>[<span class="string">&quot;data&quot;</span>] <span class="keyword">as</span> <span class="variable">$singleStep</span>) </span><br><span class="line">         &#123;</span><br><span class="line">              <span class="variable">$result</span> .= <span class="variable">$singleStep</span>[<span class="string">&quot;time&quot;</span>].<span class="string">&quot; &quot;</span>.<span class="variable">$singleStep</span>[<span class="string">&quot;content&quot;</span>].<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">         &#125;</span><br><span class="line">         <span class="keyword">return</span> <span class="variable">$result</span>;</span><br><span class="line">     &#125;</span><br><span class="line"> &#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>然后在index.php中调用即可，因为我这里采用的格式是“翻译+key”，所以通过<code>explode(“+”,$keyword)</code>对keyword进行分组，我们需要的是第二部分。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">header(&#x27;Content-type:text&#x27;);</span><br><span class="line">define(&quot;TOKEN&quot;, &quot;6doo&quot;);</span><br><span class="line">$wechatObj = new wechatCallbackapiTest();</span><br><span class="line">if (isset($_GET[&#x27;echostr&#x27;])) &#123;</span><br><span class="line">    $wechatObj-&gt;valid();</span><br><span class="line">&#125;else&#123;</span><br><span class="line">    $wechatObj-&gt;responseMsg();</span><br><span class="line">&#125;</span><br><span class="line">class wechatCallbackapiTest</span><br><span class="line">&#123;</span><br><span class="line">    public function valid()</span><br><span class="line">    &#123;</span><br><span class="line">        $echoStr = $_GET[&quot;echostr&quot;];</span><br><span class="line">        if($this-&gt;checkSignature())&#123;</span><br><span class="line">            echo $echoStr;</span><br><span class="line">            exit;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    private function checkSignature()</span><br><span class="line">    &#123;</span><br><span class="line">        $signature = $_GET[&quot;signature&quot;];</span><br><span class="line">        $timestamp = $_GET[&quot;timestamp&quot;];</span><br><span class="line">        $nonce = $_GET[&quot;nonce&quot;];</span><br><span class="line">        $token = TOKEN;</span><br><span class="line">        $tmpArr = array($token, $timestamp, $nonce);</span><br><span class="line">        sort($tmpArr);</span><br><span class="line">        $tmpStr = implode( $tmpArr );</span><br><span class="line">        $tmpStr = sha1( $tmpStr );</span><br><span class="line">        if( $tmpStr == $signature )&#123;</span><br><span class="line">            return true;</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            return false;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    public function responseMsg()</span><br><span class="line">    &#123;</span><br><span class="line">        $postStr = $GLOBALS[&quot;HTTP_RAW_POST_DATA&quot;];</span><br><span class="line">        if (!empty($postStr))&#123;</span><br><span class="line">            $postObj = simplexml_load_string($postStr, &#x27;SimpleXMLElement&#x27;, LIBXML_NOCDATA);</span><br><span class="line">            $RX_TYPE = trim($postObj-&gt;MsgType);</span><br><span class="line">        switch ($RX_TYPE)</span><br><span class="line">        &#123;</span><br><span class="line">            case &quot;text&quot;:</span><br><span class="line">                 $resultStr = $this-&gt;receiveText($postObj);</span><br><span class="line">                 break;</span><br><span class="line">            case &quot;event&quot;:</span><br><span class="line">                 $resultStr = $this-&gt;receiveEvent($postObj);</span><br><span class="line">                 break;</span><br><span class="line">        &#125;</span><br><span class="line">        echo $resultStr;</span><br><span class="line">        &#125;else &#123;</span><br><span class="line">            echo &quot;&quot;;</span><br><span class="line">            exit;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    //接收消息</span><br><span class="line">    private function receiveText($object)</span><br><span class="line">    &#123;</span><br><span class="line">        $funcFlag = 0;</span><br><span class="line">        if (strstr($keyword, &quot;快递&quot;)) &#123;</span><br><span class="line">            include(&#x27;kuaidi.php&#x27;);</span><br><span class="line">            $contentStr = kuaidi($keyword);</span><br><span class="line">        &#125;</span><br><span class="line">        $resultStr = $this-&gt;transmitText($object, $contentStr, $funcFlag);</span><br><span class="line">        return $resultStr;</span><br><span class="line">    &#125;</span><br><span class="line">    private function receiveEvent($object)</span><br><span class="line">    &#123;</span><br><span class="line">        $contentStr = &quot;&quot;;</span><br><span class="line">        switch ($object-&gt;Event)</span><br><span class="line">        &#123;</span><br><span class="line">            case &quot;subscribe&quot;:</span><br><span class="line">            $contentStr = &quot;欢迎关注6doo,回复【快递+快递公司全拼（例：shentong）+单号】可查询快递&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">        $resultStr = $this-&gt;transmitText($object, $contentStr);</span><br><span class="line">        return $resultStr;</span><br><span class="line">    &#125;</span><br><span class="line">    private function transmitText($object, $content, $flag = 0)</span><br><span class="line">    &#123;</span><br><span class="line">        $textTpl = &quot;&lt;xml&gt;</span><br><span class="line">                        &lt;ToUserName&gt;&lt;![CDATA[%s]]&gt;&lt;/ToUserName&gt;</span><br><span class="line">                        &lt;FromUserName&gt;&lt;![CDATA[%s]]&gt;&lt;/FromUserName&gt;</span><br><span class="line">                        &lt;CreateTime&gt;%s&lt;/CreateTime&gt;</span><br><span class="line">                        &lt;MsgType&gt;&lt;![CDATA]&gt;&lt;/MsgType&gt;</span><br><span class="line">                        &lt;Content&gt;&lt;![CDATA[%s]]&gt;&lt;/Content&gt;</span><br><span class="line">                        &lt;FuncFlag&gt;%d&lt;/FuncFlag&gt;</span><br><span class="line">                    &lt;/xml&gt;&quot;;</span><br><span class="line">        $resultStr = sprintf($textTpl, $object-&gt;FromUserName, $object-&gt;ToUserName, time(), $content, $flag);</span><br><span class="line">        return $resultStr;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
-
-<p>人生第一次写php，虽然一办代码都不是我写的，都是抄的，但是至少我改出来了。</p>
-<p>放个结果，开心下<br><img src="/2016/05/23/wchat-1/weixin3-226x300.png"></p>
-<p>至于微信怎么怎么进入开发者模式，怎么配置服务器，服务器端怎么操作应该就不用说了（我使用的是php），百度一下“微信订阅号开发 使用sae”之类的到处都是。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">php</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/05/23/wchat-1/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-<!-- 目录内容 -->
-             
-        <!-- 目录内容结束 -->
-
-  
-    <article id="post-web-http-request-reponse" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/05/18/web-http-request-reponse/">HTTP消息头</a>
-    </h1>
-  
-
-        
-        <a href="/2016/05/18/web-http-request-reponse/" class="archive-article-date">
-  	<time datetime="2016-05-18T05:27:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-05-18</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-            
-        <p>###（1）常用的消息头</p>
-<ul>
-<li>Connection：表示是否需要持久连接。例：Connection: close。</li>
-<li>Content-Length：用于规定消息主体的字节长度。</li>
-<li>Content-Type：用于规定消息主题的内容类型。例如：html文档类型为text/html，jpeg文件的类型为image/jpeg。</li>
-<li>Transfer-Encoding：制定为方便其通过HTTP传输而对消息主体使用的任何编码。</li>
-</ul>
-<p>###（2）请求消息头</p>
-<ul>
-<li>Accept：指定客户端能够接收的内容类型。例：Accept: text/plain, text/html。</li>
-<li>Accept-Charset：浏览器可以接受的字符编码集。例：UTF-8 – Unicode。例：Accept-Encoding: compress, gzip。</li>
-<li>Accept-Encoding：指定浏览器可以支持的web服务器返回内容压缩编码类型。</li>
-<li>Accept-Language：浏览器可接受的语言。例：Accept-Language: en,zh。</li>
-<li>Authorization：HTTP授权的授权证书。</li>
-<li>Cookie：HTTP请求发送时，会把保存在该请求域名下的所有cookie值一起发送给web服务器。</li>
-<li>Host：指定请求的服务器的域名和端口号。</li>
-<li>Referer：指示提出当前请求的原始url。</li>
-<li>User-Agent：提供与浏览器或生成请求的其他客户端软件有关的信息。</li>
-</ul>
-<p>###（3）响应消息头</p>
-<ul>
-<li>Cache-Control：指定请求和响应遵循的缓存机制。例：Cache-Control: no-cache</li>
-<li>Pragma：用于向浏览器传送缓存指令。例：Pragma: no-cache</li>
-<li>Location：用于在重定向响应中说明重定向的目标。</li>
-<li>Server：提供所使用的Web服务器软件的的相关信息。</li>
-<li>Set-Cookie：用于向浏览器发布cookie，浏览器会在随后的请求中将其返回给服务器。</li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">web</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/05/18/web-http-request-reponse/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-<!-- 目录内容 -->
-             
-        <!-- 目录内容结束 -->
-
-  
-    <article id="post-csharp-mysql-1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/05/13/csharp-mysql-1/">C#连接mysql数据库</a>
-    </h1>
-  
-
-        
-        <a href="/2016/05/13/csharp-mysql-1/" class="archive-article-date">
-  	<time datetime="2016-05-13T15:51:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-05-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-            
-        <p>本以为实验二继续写sql语句，结果一看竟然是 C/S 结构的数据库编程，要用c#连接数据库，不开心，宝宝越陷越深了。</p>
-<p>按照实验步骤上的到了添加控件 DataGridView，属性处选datasourse添加数据源，看到这呵呵了，并没有mysql数据源。</p>
-<p><img src="/2016/05/13/csharp-mysql-1/sql4.png"></p>
-<p>怎么办呢，代码实现喽。然后我就去百度了一下c#连接mysql，再加上全神的建议还是选择了用[connector/net（点击下载）]安装时要记住安装目录，后边会用到。</p>
-<p><img src="/2016/05/13/csharp-mysql-1/sql6.png"></p>
-<p><img src="/2016/05/13/csharp-mysql-1/sql7.png"></p>
-<p>添加图中的dll文件就和连接sqlserver没区别了。</p>
-<p>双击form1，在头部添加引用using MySql.Data.MySqlClient;</p>
-<p><img src="/2016/05/13/csharp-mysql-1/sql5.png"></p>
-<p>作业中操作dataGridView使用的是控件绑定的方式，这里既然不能使用控件绑定那就代码实现吧。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">private void Form1_Load(object sender, EventArgs e)</span><br><span class="line">&#123;</span><br><span class="line">    //连接字符串</span><br><span class="line">    string MyConnectionString = &quot;Server = localhost;Database = dbtest1;Uid = root;Pwd = root;&quot;;</span><br><span class="line">    //建立一个数据库连接实例并配置连接</span><br><span class="line">    MySqlConnection connection = new MySqlConnection(MyConnectionString);</span><br><span class="line">    //打开数据库连接</span><br><span class="line">    connection.Open();</span><br><span class="line">    //创建一个新的命令</span><br><span class="line">    MySqlCommand cmd = new MySqlCommand();</span><br><span class="line">    cmd.Connection = connection;</span><br><span class="line">    cmd.CommandText = &quot;select * from teacher&quot;;</span><br><span class="line">    MySqlDataAdapter mda = new MySqlDataAdapter(cmd.CommandText, connection);</span><br><span class="line">    DataSet mds = new DataSet();</span><br><span class="line">    //填充和绑定数据</span><br><span class="line">    mda.Fill(mds);</span><br><span class="line">    dataGridView1.DataSource = mds.Tables[0].DefaultView;</span><br><span class="line">    //关闭连接</span><br><span class="line">    connection.Close();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>当然这里可以使用try……catch(MySqlException ex)具体知道一些具体的错误原因。</p>
-<p>第二题：拖一个button，点击在box中显示指定的表。（我是一只复制粘贴的汪）</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">private void btnSummit_Click(object sender, EventArgs e)</span><br><span class="line">&#123;</span><br><span class="line">    string MyConnectionString = &quot;Server = localhost;Database = dbtest1;Uid = root;Pwd = root;&quot;;</span><br><span class="line">    //建立一个数据库连接实例并配置连接</span><br><span class="line">    MySqlConnection connection = new MySqlConnection(MyConnectionString);</span><br><span class="line">    //打开数据库连接</span><br><span class="line">    connection.Open();</span><br><span class="line">    MySqlCommand cmd = new MySqlCommand();</span><br><span class="line">    cmd.Connection = connection;</span><br><span class="line">    cmd.CommandText = &quot;select * from teacher&quot;;</span><br><span class="line">    cmd.CommandType = CommandType.Text;</span><br><span class="line">    MySqlDataReader sdr = cmd.ExecuteReader();</span><br><span class="line">    //循环读取输出</span><br><span class="line">    while (sdr.Read())</span><br><span class="line">    &#123;</span><br><span class="line">        richTextBox1.Text += sdr[0].ToString() + &quot;\t&quot; + sdr[1].ToString() + &quot; &quot; +</span><br><span class="line">            sdr[2].ToString() + &quot;\t&quot; + sdr[3].ToString() + &quot;\t&quot; + sdr[4].ToString() + &quot;\n&quot; ;</span><br><span class="line">    &#125;</span><br><span class="line">    connection.Close();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="最后在来说一下try……catch语句"><a href="#最后在来说一下try……catch语句" class="headerlink" title="最后在来说一下try……catch语句"></a>最后在来说一下try……catch语句</h4><ol>
-<li><p>try 用于检查发生的异常，并帮助发送任何可能的异常。</p>
+<h3 id="1-1-基本情况"><a href="#1-1-基本情况" class="headerlink" title="1.1 基本情况"></a>1.1 基本情况</h3><p>2019-2020年，App治理小组共发布通报3次，涉及应用软件17个分类共计173款，实用工具、金融理财、学习教育类的App占绝大多数。</p>
+<p>2019年-今，工信部共发布12批次通报，涉及应用软件819款。</p>
+<p>关于问题类型，这里引用知乎上的一篇文章<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/317139092">《对比可视化：App专项治理工作组检查》</a>的统计（法学博士就是不一样，太厉害了，统计的好棒，我搞了半天excel透视表数还是对不上！！）</p>
+<p><img src="/2021/04/14/App-2/1.jpg" alt="img"></p>
+<p>注：上图来源于知乎用户发表在知乎上的文章，<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/317139092">传送门</a>。</p>
+<p>照猫画虎把工信部的也列个表</p>
+<p><img src="/2021/04/14/App-2/image-20210419163850495.png" alt="image-20210419182006710"></p>
+<h3 id="1-2-现状总结"><a href="#1-2-现状总结" class="headerlink" title="1.2 现状总结"></a>1.2 现状总结</h3><ol>
+<li><p>不给权限不让用、违规收集个人信息、违规使用个人信息、超范围收集个人信息依旧是普遍存在的问题。</p>
+<p>问题小项：<strong>同意隐私政策前应用自身收集个人信息的情况</strong>（13、15）、<strong>同意隐私政策前第三方SDK收集个人信息情况</strong>（11）、<strong>因用户不同意某权限而拒绝提供业务功能</strong>（26）。</p>
+<p>个人信息收集问题会在part4 个人信息收集方面踩过的坑 里详细讲解，这里简单说下：很多app的是否可以通过统一收口部门的开发解决、第三方SDK可以关注下官网有一些是给出了解决方案的。</p>
+<p><img src="/2021/04/14/App-2/2.png" alt="2"></p>
 </li>
-<li><p>catch 以控制权更大的方式处理错误，可以有多个catch子句。</p>
+<li><p>获取敏感个人信息、敏感权限时，未同步告知其使用目的（1、5）的问题一直居首位。</p>
+<p>建议：业务认真查找敏感个人信息收集和敏感权限获取触发点，整理目的并找合规法务角色给出文案。现在部分应用商店就做的很好，上传app时就强制填写权限获取目的并在触发时弹窗提示。</p>
+<p><img src="/2021/04/14/App-2/6291618832498_.png" alt="6291618832498_.pic"></p>
 </li>
-<li><p>finally 无论是否引发了异常，finally的代码块都将被执行。</p>
+<li><p>首次运行app无隐私弹窗、默认隐私勾选（16）、隐私政策访问难阅读难的问题逐渐减少了。</p>
+<p>还需关注的问题：即使又弹窗登录时的<strong>登录即同意</strong>也不行！！！梳理好所有登录、注册的入口检查是否统一。</p>
 </li>
-<li><p>throw 用于引发异常，可引发预定义异常和自定义异常。</p>
+<li><p>未逐一列出嵌入的第三方SDK收集使用个人信息的目的、类型的问题依旧很多，但是目前已经看到很多App列了<strong>第三方SDK列表</strong>，并且很多常用的第三方SDK也给出了<strong>安全合规指南</strong>。</p>
+<p>问题小项：SDK梳理全了吗？收集哪些信息、有什么使用目的是否列全了？</p>
+<p><img src="/2021/04/14/App-2/1.png" alt="1"></p>
+</li>
+<li><p>收集某项个人信息的频度超出业务功能实际需要问题（24）仍需要重视，此问题可能需要深入测试加上对频度没有一个唯一的标准，所以被检测出来的在少数，通过近期发布的个人信息安全测评规范征求意见稿中也对App在不同场景下收集个人信息的频率着重强调，并且给了部分参考。</p>
+</li>
+<li><p>App通过欺诈、诱骗、误导方式收集个人信息在上边两个图中也是存在的，但猜测人工成本比较高可能命中率没有那么高，但是在个人信息安全测评规范征求意见稿也用一页的附录进行上述行为的举例，可以看出此项也可能是后续检查的方向。</p>
 </li>
 </ol>
-<p>一般格式</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">try  </span><br><span class="line">&#123;</span><br><span class="line">    程序代码块;</span><br><span class="line">&#125;  </span><br><span class="line">catch(Exception ex)</span><br><span class="line">&#123;</span><br><span class="line">    异常处理代码块;</span><br><span class="line">&#125;</span><br><span class="line">finally</span><br><span class="line">&#123;</span><br><span class="line">    无论是否发生异常均执行的代码块;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>拿上边的例子来说，如上边的代码，我将localhost删一个字母再去执行程序，啊哦！竟然无法执行。</p>
-<p><img src="/2016/05/13/csharp-mysql-1/sql8.png"></p>
-<p>看错误提示可知他说没有做异常处理。当我们输入错误的账号密码一类到时无法正常连接到数据库时，不做异常处理，程序会认为你已经正确连接数据库而会顺序向下执行下边的语句，这时候找不到连接对象程序就会报错，为了避免这种情况发生，我们就会使用try catch语句进行异常处理。</p>
-<p>以一dataGridView显示数据用为例</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">private void Form1_Load(object sender, EventArgs e)</span><br><span class="line">&#123;</span><br><span class="line">    //连接字符串</span><br><span class="line">    string MyConnectionString = &quot;Server = localhost;Database = dbtest1;Uid = root;Pwd = root;&quot;;</span><br><span class="line">    try</span><br><span class="line">    &#123;</span><br><span class="line">        //建立一个数据库连接实例并配置连接</span><br><span class="line">        MySqlConnection connection = new MySqlConnection(MyConnectionString);</span><br><span class="line">        //打开数据库连接</span><br><span class="line">        connection.Open();</span><br><span class="line">        MySqlCommand cmd = new MySqlCommand();</span><br><span class="line">        cmd.Connection = connection;</span><br><span class="line">        cmd.CommandText = &quot;select * from teacher&quot;;</span><br><span class="line">        MySqlDataAdapter mda = new MySqlDataAdapter(cmd.CommandText, connection);</span><br><span class="line">        DataSet mds = new DataSet();</span><br><span class="line">        //填充和绑定数据</span><br><span class="line">        mda.Fill(mds);</span><br><span class="line">        dataGridView1.DataSource = mds.Tables[0].DefaultView;</span><br><span class="line">        //关闭连接</span><br><span class="line">        connection.Close();</span><br><span class="line">    &#125;</span><br><span class="line">    catch (MySqlException ex)</span><br><span class="line">    &#123;</span><br><span class="line">        switch (ex.Number)</span><br><span class="line">        &#123;</span><br><span class="line">            case 0:</span><br><span class="line">                MessageBox.Show(&quot;不能连接到数据库服务器&quot;); break;</span><br><span class="line">            default:</span><br><span class="line">                MessageBox.Show(ex.Message); break;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">//这个ex具体的错误号我也不太清楚，总之能查看错误就好了。</span><br></pre></td></tr></table></figure>
-
-<p>这里提供设置参数有误时的执行示例<br><img src="/2016/05/13/csharp-mysql-1/sql9.png"><br><img src="/2016/05/13/csharp-mysql-1/sql10.png"></p>
-<p>异常处理是做了，可是这个异常处理真的考虑到了全部情况吗？当然没有，不过我自己觉得不是太严重所以就不写了。又看一遍代码，发现错误可能会出现在.open()后一条语句到.close()之间发生错误就无法执行.close()这时候数据库连接就不会关闭，怎么解决这个问题呢？？？？</p>
-<p>然后我就百度了一下，随便找了个解决这个问题的文章<a target="_blank" rel="noopener" href="http://blog.sina.com.cn/s/blog_8abeac5b0100zf5x.html">http://blog.sina.com.cn/s/blog_8abeac5b0100zf5x.html</a></p>
-<p>困死了困死了，晚安。</p>
+<h3 id="1-3-其他猜测"><a href="#1-3-其他猜测" class="headerlink" title="1.3 其他猜测"></a>1.3 其他猜测</h3><p>除了上述监管机构的检查项，猜测可能后续检查重点还可能包括以下问题：</p>
+<ol>
+<li>静默权限/个人信息获取问题</li>
+<li>App个人信息获取使用问题</li>
+<li>数据接口安全问题（如数据冗余、前端“脱敏”等)</li>
+</ol>
+<h2 id="2-有意思的不合规理由-千万不要存在侥幸心理"><a href="#2-有意思的不合规理由-千万不要存在侥幸心理" class="headerlink" title="2 有意思的不合规理由(千万不要存在侥幸心理)"></a>2 有意思的不合规理由(千万不要存在侥幸心理)</h2><p>app治理小组查的真的很细致，给大家分享一些检测出来的不合规理由，有一些都不知道是怎么查到的，也欢迎大家来猜测。</p>
+<ul>
+<li>未提供有效的注销用户账号功能：根据所提供的注销方式，向官方邮箱发送邮件进行注销，超过15日未收到回复。（要有人定期查看啊）</li>
+<li>收集使用个人信息的目的、方式和范围发生变化时，未以更新隐私政策等方式通知用户：更新后新增了定制化课单功能，将收集用户的课程记录，但未以任何方式告知用户。（这个真是不知道怎么被查到的）</li>
+<li>征得用户同意前就开始收集用户的网页点击记录；</li>
+<li>未提供有效的更正、删除个人信息及注销用户账号功能：向隐私政策中说明的个人信息保护邮箱发送邮件，直接被系统退信；（留的联系方式要自测下是否可以跑的通）</li>
+<li>为注销用户账号设置不合理条件：需提交用户联系方式、注册时间、注册所在地、登录过的设备型号、充值证明等信息，才允许注销；（当年的安全验证和身份识别变成了不合理条件）</li>
+<li>用户撤销位置权限授权，明确表示不同意收集该类个人信息后，仍通过其他途径收集用户地理位置等个人信息并发送至第三方服务器；</li>
+<li>未建立并公布有效的个人信息安全投诉、举报渠道：在线反馈问题显示“客服不在线，系统将自动断开会话”的提示信息；每隔15分钟拨打客服电话，均提示“坐席忙，继续等待请按1，结束请挂机”；</li>
+</ul>
 
       
 
@@ -587,34 +228,78 @@
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">mysql</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">C#</a>
-        		</li>
-      		
-		</ul>
-	</div>
+      
 
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/05/13/csharp-mysql-1/">展开全文 >></a>
-        </p>
-      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
 
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://www.6do0.cn/2021/04/14/App-2/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2020/01/20/SRC-6/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">SRC作用</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -634,203 +319,18 @@
 
 
 
-
-<!-- 目录内容 -->
-             
-        <!-- 目录内容结束 -->
-
   
-    <article id="post-life-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/04/17/life-hello-world/">hello world</a>
-    </h1>
   
 
-        
-        <a href="/2016/04/17/life-hello-world/" class="archive-article-date">
-  	<time datetime="2016-04-16T16:16:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-04-17</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-            
-        <p>hello-world!</p>
-<p>生日礼物是一个blog。</p>
+  
 
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">life</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/04/17/life-hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
+  
 
 
 <!-- 目录内容 -->
              
         <!-- 目录内容结束 -->
-
-  
-    <article id="post-crypto-Virginia" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/04/04/crypto-Virginia/">维吉尼亚的破解</a>
-    </h1>
-  
-
-        
-        <a href="/2016/04/04/crypto-Virginia/" class="archive-article-date">
-  	<time datetime="2016-04-03T16:09:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-04-04</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-            
-        <p>首先要说一句，这是我第一次用python coding，所以很多地方都不太懂，吐槽自己竟然用sum当变量名，之后有用sum()函数，然后报了错还不知道为什么。不知道用ascii码要做chr()转化，等等，还比如在重合指数函数和拟重合函数中可以提炼出一个共同的函数，但是我写完重合指数才发现，越改越乱所以就算了吧。但是我终于还是写完了，应该比C语言的代码少个几百行吧，我是不会说这篇文章，我从开始看原理到敲代码写了一天多。</p>
-<p>多表代换密码体制的分析方法主要分为三步：第一步确定秘钥长度，常用的方法有卡西斯基（Kasiski）测试法和重合指数法（Index of Coincidence）;第二步就是确定秘钥，常用的方法是拟重合指数测试法；第三步是根据第二步确定的密钥恢复出明文。</p>
-<p>Kasiski测试法：若用给定的m个密钥表周期地对明文字母加密，则当明文中有两个相同字母组在明文序列中间隔的字母数为m的倍数时，这两个明文字母组对应的密文字母组必相同。但反过来，若密文中出现两个相同的字母组，它们所对应的明文字母组未必相同，但相同的可能性很大。如果我们将密文中相同的字母组找出来，并对其相同字母数综合研究，找出它们的相同字母数的最大公因子，就有可能提取出有关密钥字的长度m的信息。</p>
-<p>具体方法：搜索长度至少为3的相同密文段，记录这些相同密文端到起始点之间的距离（d1,d2,d3……），找出（d1,d2,d3……）的所有公因子，同样为了确保秘钥长度的准确性，我们在搜索另一至少长为3的相同密文段，重复上操作，最后找出他们共同的公因子，若公因子不唯一，则在采用下边的重合因子测试法确定密钥长度。</p>
-<p>重合因子测试法：利用随机文本和英文文本的统计概率差别来分析秘钥长度。设一门语言由n个字母构成，每个字母发生的概率为pi，1≤i≤n，则重合指数是指其中两个随机元素相同的概率，记为：<img src="/2016/04/04/crypto-Virginia/4.png"></p>
-<p>实际使用CI的估计值CI’:   L:密文长度；xi：密文符号i发生的数目<br><img src="/2016/04/04/crypto-Virginia/5.png"></p>
-<p>下面就让我们拿个例子说一下吧。<br><img src="/2016/04/04/crypto-Virginia/v1.png"></p>
-<p>这是一个使用维吉尼亚进行加密的密文段，从中选取一些一眼看到的重复字段，并计算相隔的距离。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">import string</span><br><span class="line">def findstr(str1,str2):</span><br><span class="line">    a = 0</span><br><span class="line">    r = []</span><br><span class="line">    while a &lt; len(str1):</span><br><span class="line">        a = word.find(str2, a)</span><br><span class="line">        if a == -1:</span><br><span class="line">            break</span><br><span class="line">        r.append(a)</span><br><span class="line">        a = a + 1</span><br><span class="line">    x = 0</span><br><span class="line">    while x + 1 &lt;len(r):</span><br><span class="line">        print(r[x + 1] - r[x])</span><br><span class="line">        x = x + 1</span><br><span class="line">word = &quot;密文段落&quot;</span><br><span class="line">findstr(word,&#x27;sxc&#x27;)</span><br></pre></td></tr></table></figure>
-
-<p>通过计算，结果如下：<br><img src="/2016/04/04/crypto-Virginia/v2.png"></p>
-<p>观察发现，大部分都有公因子7，基本可以推断密钥的长度为7.（如果公因子还有其他的，可通过重合因子测试法进一步确定密钥长度）</p>
-<p>当然还可以通过重合指数法推断密钥长度：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">#重合指数算法，str为文本，n为假设的秘钥长度，可以分别1-n密钥长度下的ic值，找到峰值ic对应的n的大小</span><br><span class="line">def count_IOC(str,n):</span><br><span class="line">    x = 0</span><br><span class="line">    r = []</span><br><span class="line">    ic_all = []</span><br><span class="line">    while x &lt; n:</span><br><span class="line">        sum_all = 0</span><br><span class="line">        c = str[x::n]</span><br><span class="line">        len_str = len(c)</span><br><span class="line">        for y in range(0,26):</span><br><span class="line">            r.append(c.count(chr(97+y) ,0,len_str))</span><br><span class="line">        for p in range(0,26):</span><br><span class="line">            sum_all = sum_all + r[p] * (r[p] - 1)</span><br><span class="line">        ic = float(sum_all)/(len_str * (len_str - 1))</span><br><span class="line">        print(ic)</span><br><span class="line">        ic_all.append(ic)</span><br><span class="line">        x = x + 1</span><br><span class="line">    return sum(ic_all)/ n</span><br><span class="line">#假设猜测秘钥长度在10以下</span><br><span class="line">for x in range(0,10):</span><br><span class="line">    count_IOC(word, x)</span><br></pre></td></tr></table></figure>
-
-<p>结果如下，峰值为n = 7时，佐证了用kasiski测试法算出的秘钥等于7.<br><img src="/2016/04/04/crypto-Virginia/v3.png"></p>
-<p>知道了密钥，下一步就是利用拟重合指数测试法了。</p>
-<p>首先按照已知秘钥的长度，将密文7个一行7各一行进行分组，把每列作为一组进行分组，</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#对密文进行分组（密文文本，第i组，秘钥长度）</span><br><span class="line">def divstr(str, i, n):</span><br><span class="line">    c = str[i::n]</span><br><span class="line">    return c</span><br></pre></td></tr></table></figure>
-
-<p>拟重合指数测试法：首先子密文段重各个字母的频率进行统计（记为fi, i∈a – z），查看字母频率分布统计概率(记pi)，计算子密文段长度为n，</p>
-<p>使用公式<img src="/2016/04/04/crypto-Virginia/v4.png">计算出M0，然后对子密文段移位25次，同样按照上述方法求出M1 — M25的值，</p>
-<p>根据重合指数的定义知：一个有意义的英文文本，M ≈0.065，所以利用这个规律，就可以确定秘钥中的每一个字母。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">#所有成员自增</span><br><span class="line">def member_plus(r):</span><br><span class="line">    m = []</span><br><span class="line">    for i in r:</span><br><span class="line">        if i == &#x27;z&#x27;:</span><br><span class="line">            i = chr(96)</span><br><span class="line">        m.append(chr(ord(i)+1))</span><br><span class="line">    return (&#x27;&#x27;).join(m) </span><br><span class="line">这里有必要说一下return(&#x27;&#x27;).join(p)，p是一个list，而我们需要的是个字符串，如果返回list，下边就会报错，因为python中有list.count(ord)和str.count(sub,,)函数。</span><br><span class="line"></span><br><span class="line">#拟重合指数</span><br><span class="line">def count_NIOC(i, c):</span><br><span class="line">    p = [0.08167, 0.01492, 0.02782, 0.04253, 0.12702, 0.02228, 0.02015, 0.06094, 0.06966, 0.00153, 0.00772, 0.04025,</span><br><span class="line">         0.02406, 0.06749, 0.07507, 0.01929, 0.00095, 0.05987, 0.06327, 0.09056, 0.02758, 0.00978, 0.02360, 0.00150,</span><br><span class="line">         0.01974, 0.00074]</span><br><span class="line">    len_str = len(c)</span><br><span class="line">    r = []</span><br><span class="line">    sum_m = 0</span><br><span class="line">    for y in range(0, 26):</span><br><span class="line">        r.append(c.count(chr(97 + y), 0, len_str))#统计字串中a-z的数量</span><br><span class="line">    for x in range(0, 26):</span><br><span class="line">        f = (r[x] * p[x]) / len_str </span><br><span class="line">        sum_m = sum_m + f</span><br><span class="line">    print(i,sum_m)</span><br><span class="line"></span><br><span class="line">#改变第二个参数：第几组子密文段，第三个参数：秘钥长度，分别计算秘钥中的各个字母</span><br><span class="line">str0 = divstr(word,2,7)</span><br><span class="line">for x in range(0,26):</span><br><span class="line">    count_NIOC(x, str0)</span><br><span class="line">    str0 = member_plus(str0)#每计算一次Mx，子密文段自加</span><br></pre></td></tr></table></figure>
-
-<p>以代码中的第3组为例对上文例题计算结果如下图：</p>
-<p><img src="/2016/04/04/crypto-Virginia/v6.png"></p>
-<p>可以看到x = 16时，M最接近0.065，所以x = 16 对应的字母q就是第三组密文的秘钥。</p>
-<p>终于写完了，激动地快要哭了。很多地方纠结了很久，这个例题是网上下载的ppt里边的，也没有具体的答案，只能讲个大概的过程，书上对维吉尼亚的破解讲的也十分模糊，我只能尽力理解到这里了。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">crypto</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/04/04/crypto-Virginia/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-<!-- 目录内容 -->
-             
-        <!-- 目录内容结束 -->
-
-  
-  
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/4/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span>
-    </nav>
-  
-
 
           </div>
         </div>
@@ -851,8 +351,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
