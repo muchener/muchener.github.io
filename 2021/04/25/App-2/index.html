@@ -6,24 +6,26 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.6do0.cn">
-  <title>App安全合规 part1 App安全认证 | muchener&#39;s blogs</title>
+  <title>App安全合规—part2 当前监管的重点变化梳理 | muchener&#39;s blogs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="近些年来各监管机构对于APP的监管越来越严格，企业对APP安全合规工作也来越重视。 从2019年我负责跟进公司参与的App安全认证的试点工作到现在，已经接触App安全合规工作近两年了，非常感谢这两年一起推进工作的法务老师和同事，让我从一开始的连GB&#x2F;T 35273都不知道，到之后的了解。虽然现在还是对很多状况不知所措的，但是已经有了基本的认知和处理方法。 回想这两年，虽然自己推进App安全合规工">
+  <meta name="description" content="APP安全认证的工作流程梳理 （点链接查看） 当前监管的重点变化梳理(下文)  0 前言关于App安全合规的监管要求很多地方都可以找到，这里就不一一赘述了。本文的重点内容是通过对监管机构发出来的通报进行统计分析，解读监管走向。 嗯哼，想要解读监管走向，首先就要了解现在都有哪些监管机构：  App违法违规收集使用个人信息治理工作组（App治理小组）  工业和信息化部信息通信管理局（工信部） 国家移">
 <meta property="og:type" content="article">
-<meta property="og:title" content="App安全合规 part1 App安全认证">
-<meta property="og:url" content="http://www.6do0.cn/2016/10/05/APP-1/index.html">
+<meta property="og:title" content="App安全合规—part2 当前监管的重点变化梳理">
+<meta property="og:url" content="http://www.6do0.cn/2021/04/25/App-2/index.html">
 <meta property="og:site_name" content="muchener&#39;s blogs">
-<meta property="og:description" content="近些年来各监管机构对于APP的监管越来越严格，企业对APP安全合规工作也来越重视。 从2019年我负责跟进公司参与的App安全认证的试点工作到现在，已经接触App安全合规工作近两年了，非常感谢这两年一起推进工作的法务老师和同事，让我从一开始的连GB&#x2F;T 35273都不知道，到之后的了解。虽然现在还是对很多状况不知所措的，但是已经有了基本的认知和处理方法。 回想这两年，虽然自己推进App安全合规工">
+<meta property="og:description" content="APP安全认证的工作流程梳理 （点链接查看） 当前监管的重点变化梳理(下文)  0 前言关于App安全合规的监管要求很多地方都可以找到，这里就不一一赘述了。本文的重点内容是通过对监管机构发出来的通报进行统计分析，解读监管走向。 嗯哼，想要解读监管走向，首先就要了解现在都有哪些监管机构：  App违法违规收集使用个人信息治理工作组（App治理小组）  工业和信息化部信息通信管理局（工信部） 国家移">
 <meta property="og:locale">
-<meta property="og:image" content="http://www.6do0.cn/2016/10/05/APP-1/App%E5%AE%89%E5%85%A8%E8%AE%A4%E8%AF%81%E6%B5%81%E7%A8%8B%E5%9B%BE.jpg">
-<meta property="og:image" content="http://www.6do0.cn/2016/10/05/APP-1/%E8%87%AA%E8%AF%84%E4%BC%B0%E5%86%85%E5%AE%B9.png">
-<meta property="article:published_time" content="2016-10-05T14:56:56.000Z">
-<meta property="article:modified_time" content="2021-05-06T09:43:44.651Z">
+<meta property="og:image" content="http://www.6do0.cn/2021/04/25/App-2/1.jpg">
+<meta property="og:image" content="http://www.6do0.cn/2021/04/25/App-2/image-20210419163850495.png">
+<meta property="og:image" content="http://www.6do0.cn/2021/04/25/App-2/2.png">
+<meta property="og:image" content="http://www.6do0.cn/2021/04/25/App-2/6291618832498_.png">
+<meta property="og:image" content="http://www.6do0.cn/2021/04/25/App-2/1.png">
+<meta property="article:published_time" content="2021-04-25T14:56:56.000Z">
+<meta property="article:modified_time" content="2021-05-06T09:50:05.860Z">
 <meta property="article:author" content="暮晨儿">
-<meta property="article:tag" content="crypto">
-<meta property="article:tag" content="python">
+<meta property="article:tag" content="App安全合规">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://www.6do0.cn/2016/10/05/APP-1/App%E5%AE%89%E5%85%A8%E8%AE%A4%E8%AF%81%E6%B5%81%E7%A8%8B%E5%9B%BE.jpg">
+<meta name="twitter:image" content="http://www.6do0.cn/2021/04/25/App-2/1.jpg">
   
     <link rel="alternative" href="/atom.xml" title="muchener&#39;s blogs" type="application/atom+xml">
   
@@ -153,136 +155,87 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-APP-1" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-App-2" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      App安全合规 part1 App安全认证
+      App安全合规—part2 当前监管的重点变化梳理
     </h1>
   
 
         
-        <a href="/2016/10/05/APP-1/" class="archive-article-date">
-  	<time datetime="2016-10-05T14:56:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-10-05</time>
+        <a href="/2021/04/25/App-2/" class="archive-article-date">
+  	<time datetime="2021-04-25T14:56:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-25</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
             
-        <blockquote>
-<p>近些年来各监管机构对于APP的监管越来越严格，企业对APP安全合规工作也来越重视。</p>
-<p>从2019年我负责跟进公司参与的App安全认证的试点工作到现在，已经接触App安全合规工作近两年了，非常感谢这两年一起推进工作的法务老师和同事，让我从一开始的连GB/T 35273都不知道，到之后的了解。虽然现在还是对很多状况不知所措的，但是已经有了基本的认知和处理方法。</p>
-<p>回想这两年，虽然自己推进App安全合规工作上一直还处于摸索阶段，但也有很多可以沉淀输出的东西，由于自己太懒一直在拖延，最近睡前（失眠）总在想一些自己对App安全合规治理和整改的想法和实践，所以想形成文章和各位对App安全合规治理感兴趣的师傅们一起交流讨论~</p>
-<p>目前想的这个系列的章节大概如下（列出来欢迎大家监督更新）：</p>
+        <ol>
+<li><a target="_blank" rel="noopener" href="https://www.freebuf.com/articles/compliance/269309.html">APP安全认证的工作流程梳理</a> （点链接查看）</li>
+<li>当前监管的重点变化梳理(下文)</li>
+</ol>
+<h2 id="0-前言"><a href="#0-前言" class="headerlink" title="0 前言"></a>0 前言</h2><p>关于App安全合规的监管要求很多地方都可以找到，这里就不一一赘述了。本文的重点内容是通过对监管机构发出来的通报进行统计分析，解读监管走向。</p>
+<p>嗯哼，想要解读监管走向，首先就要了解现在都有哪些监管机构：</p>
 <ol>
-<li>APP安全认证的工作流程梳理</li>
-<li>当前监管的重点变化梳理</li>
-<li>关于SDK合规的一些思考</li>
-<li>个人信息收集方面踩过的坑</li>
-<li>如何应对突如其来的监管机构的整改通知</li>
-<li>内部的App安全合规整改流程</li>
-<li>…………持续更新中…………</li>
+<li>App违法违规收集使用个人信息治理工作组（App治理小组）</li>
+<li> 工业和信息化部信息通信管理局（工信部）</li>
+<li>国家移动互联网应用安全管理中心（病毒中心）</li>
+<li>地方通管局（如广东省通管局、天津通管局等）</li>
+<li>地方网安（主要关注公司所属地的，当然也不排除有跨地域通报的情况呀）</li>
 </ol>
+<h2 id="1-通报情况"><a href="#1-通报情况" class="headerlink" title="1 通报情况"></a>1 通报情况</h2><blockquote>
+<p>App治理小组发布的问题详情是监管机构里列举的很清晰的了，所以下文大部分以app治理小组通报的问题为基础进行统计分析。</p>
 </blockquote>
-<p>进入今天的Part1：APP安全认证的工作流程梳理</p>
-<p>本文发表在：<a target="_blank" rel="noopener" href="https://www.freebuf.com/articles/compliance/269309.html">https://www.freebuf.com/articles/compliance/269309.html</a></p>
-<p>近些年来各监管机构对于APP的监管越来越严格，企业对APP安全合规工作也来越重视。</p>
-<p>从2019年我负责跟进公司参与的App安全认证的试点工作到现在，已经接触App安全合规工作近两年了，非常感谢这两年一起推进工作的法务老师和同事，让我从一开始的连GB/T 35273都不知道，到之后的了解。虽然现在还是对很多状况不知所措的，但是已经有了基本的认知和处理方法。</p>
-<p>回想这两年，虽然自己推进App安全合规工作上一直还处于摸索阶段，但也有很多可以沉淀输出的东西，由于自己太懒一直在拖延，最近睡前（失眠）总在想一些自己对App安全合规治理和整改的想法和实践，所以想形成文章和各位对App安全合规治理感兴趣的师傅们一起交流讨论~</p>
-<p>目前想的这个系列的章节大概如下（列出来欢迎大家监督更新）：</p>
-<ol>
-<li>APP安全认证的工作流程梳理</li>
-<li>当前监管的重点变化梳理</li>
-<li>关于SDK合规的一些思考</li>
-<li>个人信息收集方面踩过的坑</li>
-<li>如何应对突如其来的监管机构的整改通知</li>
-<li>内部的App安全合规整改流程</li>
-<li>…………持续更新中…………</li>
-</ol>
-<p>进入今天的Part1：APP安全认证的工作流程梳理</p>
-<blockquote>
-<p>下文中的《规范》为GB/T 35273《信息安全技术 个人信息安全规范》的简称；</p>
-<p>2019年03月15日 ,市场监管总局及中央网信办发布<a target="_blank" rel="noopener" href="http://www.cac.gov.cn/2019-03/15/c_1124240900.htm">《关于开展App安全认证工作的公告》</a>。</p>
-</blockquote>
-<h3 id="0-认证流程"><a href="#0-认证流程" class="headerlink" title="0 认证流程"></a>0 认证流程</h3><p>整个流程涉及<strong>安全、法务、业务（产品、开发、测试）</strong>的同学共同努力完成。</p>
-<p>第一步：提交认证申请及自评估材料，自评估材料主要是针对《规范》5-11的内容；</p>
-<p>第二步：现场技术认证（主要针对APP及内置功能的是否符合《规范》5-9的内容），根据不合格问题进行整改；</p>
-<p>第三步：现场审核（主要针对管理制度是否符合《规范》9-11的内容），根据不合格问题进行整改；</p>
-<p>———–到此就可以拿到证书了——–</p>
-<p>后续需要进行证书维持，包括版本迭代的信息更新、变化性评估等。</p>
-<p><img src="/2016/10/05/APP-1/App%E5%AE%89%E5%85%A8%E8%AE%A4%E8%AF%81%E6%B5%81%E7%A8%8B%E5%9B%BE.jpg" alt="App安全认证流程图"></p>
-<h3 id="1-自评估"><a href="#1-自评估" class="headerlink" title="1 自评估"></a>1 自评估</h3><p>《规范》中每一小节进行自评估，将不合规项总结出来进行整改。</p>
-<h4 id="1-1-自评估内容"><a href="#1-1-自评估内容" class="headerlink" title="1.1 自评估内容"></a>1.1 自评估内容</h4><p>因为公司产品功能比较单一，有些项可能未提及。大致分为：App端测试、后端及运营、隐私政策、内部管理制度四部分。具体检查内容详见下边的脑图（待完善）</p>
-<p><img src="/2016/10/05/APP-1/%E8%87%AA%E8%AF%84%E4%BC%B0%E5%86%85%E5%AE%B9.png" alt="自评估内容"></p>
-<h4 id="1-2-自评估材料准备"><a href="#1-2-自评估材料准备" class="headerlink" title="1.2 自评估材料准备"></a>1.2 自评估材料准备</h4><p>申请书附录中的位置并不够展示证明截图，建议使用如下方法准备自评估资料，包括：</p>
-<p>![自评估材料准备](./App-1 /自评估材料准备.png)</p>
-<h4 id="1-3-自评估遇到的问题"><a href="#1-3-自评估遇到的问题" class="headerlink" title="1.3 自评估遇到的问题"></a>1.3 自评估遇到的问题</h4><ol>
-<li>由于对标准的理解问题，可能会出现多次修改的情况，<strong>建议不对外发版，只打测试包就ok</strong>。</li>
-<li>有些权限/收集信息未触发，可能是无权限进入，或者功能埋点较深，建议多和业务沟通。</li>
-<li>不同渠道可能嵌入了不同的SDK，建议逐一测试。</li>
-</ol>
-<h3 id="2-技术验证"><a href="#2-技术验证" class="headerlink" title="2 技术验证"></a>2 技术验证</h3><p>技术验证主要是针对APP及内置功能的是否符合《规范》5-9的内容进行的，一般测评人员也会进行现场审核。</p>
-<h4 id="2-1-重点关注内容"><a href="#2-1-重点关注内容" class="headerlink" title="2.1 重点关注内容"></a>2.1 重点关注内容</h4><ul>
-<li>7.1 个人信息访问控制措施</li>
-<li>5.5 个人信息保护政策</li>
-<li>个人信息收集情况（类型、频率、是否明示）</li>
-<li>注销功能</li>
-<li>个性化展示</li>
-<li>第三方SDK使用情况</li>
-<li>个人信息存储情况</li>
-</ul>
-<h4 id="2-2-技术验证环节问题"><a href="#2-2-技术验证环节问题" class="headerlink" title="2.2 技术验证环节问题"></a>2.2 技术验证环节问题</h4><h5 id="2-2-1-第三方SDK问题"><a href="#2-2-1-第三方SDK问题" class="headerlink" title="2.2.1 第三方SDK问题"></a>2.2.1 第三方SDK问题</h5><ul>
-<li>针对第三方接入管理的界定，嵌入第三方SDK是否属于第三方接入，是否需要进行适当接入评估、数据处理协议签订等等。<em>（开始认为属于-后来不属于-针对目前情况来看还是属于）</em></li>
-<li>第三方SDK应该是数据处理者？数据控制者？数据共享接收方？？？？<ul>
-<li>如果跳转到第三方平台授权（如使用微信登录、QQ登录等）有品牌露出，这事<strong>独立的数据控制者</strong>。</li>
-<li>对于无品牌露出，用户无法感知的SDK应该为<strong>数据数据处理者</strong>，但因目前的形式都是第三方 SDK 提供者与 App 开发者往往通过第三方SDK 提供者的开放平台，在线签署开发者服务协议来约定双方的 权利义务，鲜少有关于委托处理数据方面的专门协议或特别规定，也就难以算作协议双方之间的有效“授权”。无法真正理清责任关系。——出自《2020年软件开发包sdk安全与合规报告》。</li>
-</ul>
+<h3 id="1-1-基本情况"><a href="#1-1-基本情况" class="headerlink" title="1.1 基本情况"></a>1.1 基本情况</h3><p>2019-2020年，App治理小组共发布通报3次，涉及应用软件17个分类共计173款，实用工具、金融理财、学习教育类的App占绝大多数。</p>
+<p>2019年-今，工信部共发布12批次通报，涉及应用软件819款。</p>
+<p>关于问题类型，这里引用知乎上的一篇文章<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/317139092">《对比可视化：App专项治理工作组检查》</a>的统计（法学博士就是不一样，太厉害了，统计的好棒，我搞了半天excel透视表数还是对不上！！）</p>
+<p><img src="/2021/04/25/App-2/1.jpg" alt="img"></p>
+<p>注：上图来源于知乎用户发表在知乎上的文章，<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/317139092">传送门</a>。</p>
+<p>照猫画虎把工信部的也列个表</p>
+<p><img src="/2021/04/25/App-2/image-20210419163850495.png" alt="image-20210419182006710"></p>
+<h3 id="1-2-现状总结"><a href="#1-2-现状总结" class="headerlink" title="1.2 现状总结"></a>1.2 现状总结</h3><ol>
+<li><p>不给权限不让用、违规收集个人信息、违规使用个人信息、超范围收集个人信息依旧是普遍存在的问题。</p>
+<p>问题小项：<strong>同意隐私政策前应用自身收集个人信息的情况</strong>（13、15）、<strong>同意隐私政策前第三方SDK收集个人信息情况</strong>（11）、<strong>因用户不同意某权限而拒绝提供业务功能</strong>（26）。</p>
+<p>个人信息收集问题会在part4 个人信息收集方面踩过的坑 里详细讲解，这里简单说下：很多app的是否可以通过统一收口部门的开发解决、第三方SDK可以关注下官网有一些是给出了解决方案的。</p>
+<p><img src="/2021/04/25/App-2/2.png" alt="2"></p>
 </li>
-</ul>
-<h5 id="2-2-2-个人信息收集-存储的情况"><a href="#2-2-2-个人信息收集-存储的情况" class="headerlink" title="2.2.2 个人信息收集/存储的情况"></a>2.2.2 个人信息收集/存储的情况</h5><ul>
-<li>在同意隐私政策之前，不应存在敏感个人信息收集的情况</li>
-<li>敏感信息的收集频率不应过高，对应5.2.b</li>
-<li>用户输入个人敏感信息的页面，应做提示</li>
-</ul>
-<h5 id="2-2-3-其他"><a href="#2-2-3-其他" class="headerlink" title="2.2.3 其他"></a>2.2.3 其他</h5><ul>
-<li>注销流程要能跑通，符合用户注销相关要求</li>
-<li>投诉、举报、客服渠道有人响应：如客服电话能接听、QQ申请能同意、人工客服有回复等。</li>
-<li>个人信息访问控制措施</li>
-</ul>
-<h3 id="3-现场审核"><a href="#3-现场审核" class="headerlink" title="3 现场审核"></a>3 现场审核</h3><h4 id="3-1-重点关注内容"><a href="#3-1-重点关注内容" class="headerlink" title="3.1 重点关注内容"></a>3.1 重点关注内容</h4><ol>
-<li>应急预案中是否制定了针对个人信息安全事件的</li>
-<li>是否针对开发、设计等人员进行个人信息安全相关的专业化培训及考核，提供记录</li>
-<li>安全审计情况</li>
-<li>开展个人信息安全影响评估的情况</li>
+<li><p>获取敏感个人信息、敏感权限时，未同步告知其使用目的（1、5）的问题一直居首位。</p>
+<p>建议：业务认真查找敏感个人信息收集和敏感权限获取触发点，整理目的并找合规法务角色给出文案。现在部分应用商店就做的很好，上传app时就强制填写权限获取目的并在触发时弹窗提示。</p>
+<p><img src="/2021/04/25/App-2/6291618832498_.png" alt="6291618832498_.pic"></p>
+</li>
+<li><p>首次运行app无隐私弹窗、默认隐私勾选（16）、隐私政策访问难阅读难的问题逐渐减少了。</p>
+<p>还需关注的问题：即使又弹窗登录时的<strong>登录即同意</strong>也不行！！！梳理好所有登录、注册的入口检查是否统一。</p>
+</li>
+<li><p>未逐一列出嵌入的第三方SDK收集使用个人信息的目的、类型的问题依旧很多，但是目前已经看到很多App列了<strong>第三方SDK列表</strong>，并且很多常用的第三方SDK也给出了<strong>安全合规指南</strong>。</p>
+<p>问题小项：SDK梳理全了吗？收集哪些信息、有什么使用目的是否列全了？</p>
+<p><img src="/2021/04/25/App-2/1.png" alt="1"></p>
+</li>
+<li><p>收集某项个人信息的频度超出业务功能实际需要问题（24）仍需要重视，此问题可能需要深入测试加上对频度没有一个唯一的标准，所以被检测出来的在少数，通过近期发布的个人信息安全测评规范征求意见稿中也对App在不同场景下收集个人信息的频率着重强调，并且给了部分参考。</p>
+</li>
+<li><p>App通过欺诈、诱骗、误导方式收集个人信息在上边两个图中也是存在的，但猜测人工成本比较高可能命中率没有那么高，但是在个人信息安全测评规范征求意见稿也用一页的附录进行上述行为的举例，可以看出此项也可能是后续检查的方向。</p>
+</li>
 </ol>
-<h4 id="3-2-现场审核环节问题"><a href="#3-2-现场审核环节问题" class="headerlink" title="3.2 现场审核环节问题"></a>3.2 现场审核环节问题</h4><h5 id="3-2-1针对“明确个人信息保护负责人和个人信息保护工作机构”检查项"><a href="#3-2-1针对“明确个人信息保护负责人和个人信息保护工作机构”检查项" class="headerlink" title="3.2.1针对“明确个人信息保护负责人和个人信息保护工作机构”检查项"></a>3.2.1针对“明确个人信息保护负责人和个人信息保护工作机构”检查项</h5><ol>
-<li>方法一: 个人信息保护负责人=业务负责人</li>
-<li>方法二: 建立信息安全委员会，有机构负责个人信息保护工作。</li>
-</ol>
-<h5 id="3-2-2-开展个人信息安全评估"><a href="#3-2-2-开展个人信息安全评估" class="headerlink" title="3.2.2 开展个人信息安全评估"></a>3.2.2 开展个人信息安全评估</h5><p>检查存在以下情况时，必须提供个人信息安全评估报告：</p>
+<h3 id="1-3-其他猜测"><a href="#1-3-其他猜测" class="headerlink" title="1.3 其他猜测"></a>1.3 其他猜测</h3><p>除了上述监管机构的检查项，猜测可能后续检查重点还可能包括以下问题：</p>
 <ol>
-<li>存在基于不同业务目的的所收集个人信息的融合汇聚</li>
-<li>存在信息系统自动决策机制</li>
-<li>存在委托处理、数据共享、个人信息公开披露情况</li>
+<li>静默权限/个人信息获取问题</li>
+<li>App个人信息获取使用问题</li>
+<li>数据接口安全问题（如数据冗余、前端“脱敏”等)</li>
 </ol>
-<h3 id="4-认证决定阶段需提供App漏洞测试报告"><a href="#4-认证决定阶段需提供App漏洞测试报告" class="headerlink" title="4 认证决定阶段需提供App漏洞测试报告"></a>4 认证决定阶段需提供App漏洞测试报告</h3><p>这里单独写出来主要是最近有在做的朋友问过我关于报告的问题，单独说一下。</p>
-<p>通知准备材料如下：“此漏洞测试报告作为对标GB∕T 34975-2017检测报告中符合4.1.5.1要求的证明文件。漏洞测试工具建议选择专业主流的检测工具。”</p>
-<p>选择市面上常见的漏扫工具即可，很多公司都有自己采购移动漏扫工具，或者使用一些在线服务如360的显危镜、腾讯的金刚等等，付费免费应该是没有太多要求。高危漏洞的处理法方法找了个比较清晰的文档<a target="_blank" rel="noopener" href="http://appscan.360.cn/vulner/list/%E3%80%82">http://appscan.360.cn/vulner/list/。</a></p>
-<h3 id="5-后期维护"><a href="#5-后期维护" class="headerlink" title="5 后期维护"></a>5 后期维护</h3><h4 id="5-1-何时需要提交自评价报告"><a href="#5-1-何时需要提交自评价报告" class="headerlink" title="5.1 何时需要提交自评价报告"></a>5.1 何时需要提交自评价报告</h4><p>(1)获证App的分发渠道发生变化;</p>
-<p> (2)认证标志使用情况发生变化; </p>
-<p>(3)获证App隐私政策发生变化;</p>
-<p> (4)获证App收集、处理和使用个人信息的目的、类型、方式发生变化; </p>
-<p>(5)获证App运营者对所收集个人信息的共享、转让、公开披露的对象、方式和目的发生变化;</p>
-<p> (6)获证App运营者收到获证App个人信息保护相关的投诉举报。</p>
-<h4 id="5-2-证书变更"><a href="#5-2-证书变更" class="headerlink" title="5.2 证书变更"></a>5.2 证书变更</h4><p>出现下列情况之一时，获证App运营者应向认证机构提出变更申请:</p>
-<p>(1)获证App名称、版本发生变更;</p>
-<p>(2)认证范围扩大或缩小;</p>
-<p>(3)获证App运营者名称、注册地址发生变更;</p>
-<p><strong>注：大版本变更、小版本新增功能新增涉及个人信息收集等情况会涉及变更费用、技术验证、现场审核费用。</strong></p>
+<h2 id="2-有意思的不合规理由-千万不要存在侥幸心理"><a href="#2-有意思的不合规理由-千万不要存在侥幸心理" class="headerlink" title="2 有意思的不合规理由(千万不要存在侥幸心理)"></a>2 有意思的不合规理由(千万不要存在侥幸心理)</h2><p>app治理小组查的真的很细致，给大家分享一些检测出来的不合规理由，有一些都不知道是怎么查到的，也欢迎大家来猜测。</p>
+<ul>
+<li>未提供有效的注销用户账号功能：根据所提供的注销方式，向官方邮箱发送邮件进行注销，超过15日未收到回复。（要有人定期查看啊）</li>
+<li>收集使用个人信息的目的、方式和范围发生变化时，未以更新隐私政策等方式通知用户：更新后新增了定制化课单功能，将收集用户的课程记录，但未以任何方式告知用户。（这个真是不知道怎么被查到的）</li>
+<li>征得用户同意前就开始收集用户的网页点击记录；</li>
+<li>未提供有效的更正、删除个人信息及注销用户账号功能：向隐私政策中说明的个人信息保护邮箱发送邮件，直接被系统退信；（留的联系方式要自测下是否可以跑的通）</li>
+<li>为注销用户账号设置不合理条件：需提交用户联系方式、注册时间、注册所在地、登录过的设备型号、充值证明等信息，才允许注销；（当年的安全验证和身份识别变成了不合理条件）</li>
+<li>用户撤销位置权限授权，明确表示不同意收集该类个人信息后，仍通过其他途径收集用户地理位置等个人信息并发送至第三方服务器；</li>
+<li>未建立并公布有效的个人信息安全投诉、举报渠道：在线反馈问题显示“客服不在线，系统将自动断开会话”的提示信息；每隔15分钟拨打客服电话，均提示“坐席忙，继续等待请按1，结束请挂机”；</li>
+</ul>
 
       
 
@@ -296,11 +249,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">crypto</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">App安全合规</a>
         		</li>
       		
 		</ul>
@@ -356,7 +305,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://www.6do0.cn/2016/10/05/APP-1/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://www.6do0.cn/2021/04/25/App-2/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -370,18 +319,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2016/10/05/crypto-rsa-2/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          RSA（二）之共模攻击
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/10/03/crypto-rsa-3/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">RSA（三）之小公钥指数攻击</div>
+    <a href="/2021/04/05/APP-1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">App安全合规 part1 App安全认证</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -562,6 +502,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">php</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">App安全合规</a>
               </li>
             
             <div class="clearfix"></div>
