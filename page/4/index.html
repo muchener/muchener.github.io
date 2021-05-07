@@ -148,6 +148,96 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-da-shumo-1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/01/22/da-shumo-1/">数模笔记：多项式拟合（1）</a>
+    </h1>
+  
+
+        
+        <a href="/2017/01/22/da-shumo-1/" class="archive-article-date">
+  	<time datetime="2017-01-21T16:16:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+            
+        <h2 id="多项式拟合"><a href="#多项式拟合" class="headerlink" title="多项式拟合"></a>多项式拟合</h2><blockquote>
+<p>多项式拟合：poly= np.polyfit(x,a,n),拟合点集a得到n级多项式，其中x为横轴长度，返回多项式的系数</p>
+<p>多项式求导函数：np.polyder(poly),返回导函数的系数得到多项式的n阶导函数：多项式.deriv(m = n)</p>
+<p>多项式求根：np.roots(poly)</p>
+<p>多项式在某点上的值：np.polyval(poly,x[n]),返回poly多项式在横轴点上x[n]上的值</p>
+<p>两个多项式做差运算： np.polysub(a,b)</p>
+<p>多项式方程：np.poly1d(ploy)</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line">import pylab as pl</span><br><span class="line">mass = [50*i for i in range(1,12)]</span><br><span class="line">length = [1.000,1.875,2.750,3.250,4.375,4.875,5.675,6.500,7.250,8.000,8.750]</span><br><span class="line"></span><br><span class="line">pl.plot(mass, length,&#x27;o&#x27;)</span><br><span class="line">c = np.polyfit(mass, length,1)#按一次多项式拟合</span><br><span class="line">x_new = np.linspace(-100, 900, 100)##取样</span><br><span class="line">y_new = np.polyval(c,x_new)## 求y</span><br><span class="line"></span><br><span class="line">pl.plot(x_new,y_new)</span><br><span class="line">pl.xlim(0.0,600)</span><br><span class="line">pl.ylim(0,9)</span><br><span class="line">pl.show()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<p>结果</p>
+<p><img src="/2017/01/22/da-shumo-1/Figure_1.png"></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">DA</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/01/22/da-shumo-1/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+<!-- 目录内容 -->
+             
+        <!-- 目录内容结束 -->
+
+  
     <article id="post-prompt-to-win" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -940,98 +1030,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2016/09/01/crypto-rsa-4/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-<!-- 目录内容 -->
-             
-        <!-- 目录内容结束 -->
-
-  
-    <article id="post-wchat-3" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/06/22/wchat-3/">微信公众号连接数据库查询</a>
-    </h1>
-  
-
-        
-        <a href="/2016/06/22/wchat-3/" class="archive-article-date">
-  	<time datetime="2016-06-22T15:42:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-06-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-            
-        <p>因为七月底要面临小鲜肉们入学的此等好事，所以就打算给学院的官方公众微信平台加个用姓名查询学号、班级、课表之类的东西，每年手动输入的真的是挺累的，方便学弟学妹。其次呢，这个微信公众号代表代表着计算机学院，连微信都不能高大上一点，可怎么吸引学弟学妹们呢？？于是乎，我就想可以先做出个样子，然后管辅导员要点经费，一台云主机+一个域名再加上一个人，就足够了。我真是个心机婊！！！！好吧，切入正题。</p>
-<p>这次肯定还是借鉴了<a target="_blank" rel="noopener" href="http://www.cnblogs.com/mchina/p/3332283.html%E8%BF%99%E4%B8%AA%E7%B3%BB%E5%88%97%E7%9A%84%E6%96%87%E7%AB%A0%EF%BC%8C%E5%A4%A7%E9%83%A8%E5%88%86%E4%BB%A3%E7%A0%81%E9%83%BD%E6%98%AF%E5%A4%8D%E5%88%B6%E7%B2%98%E8%B4%B4%E6%9D%A5%E7%9A%84%EF%BC%8C%E4%B8%8D%E8%BF%87%E6%9C%89%E9%83%A8%E5%88%86%E4%BB%A3%E7%A0%81%E4%BB%96%E7%9A%84%E6%96%87%E7%AB%A0%E4%B8%AD%E6%9C%89%E9%94%99%E8%AF%AF%E7%BB%86%E8%87%B4%E8%A7%82%E5%AF%9F%E5%90%A7%E3%80%82%E8%87%B3%E4%BA%8E%E5%B0%81%E8%A3%85%E6%88%90%E7%B1%BB%EF%BC%9F%E5%B0%B1%E7%AE%97%E4%BA%86%E5%90%A7%EF%BC%8C%E6%88%91%E6%87%92%E3%80%82%E6%B5%8B%E8%AF%95%E8%BF%87%E4%B8%80%E4%BA%9B%E7%AE%80%E5%8D%95%E7%9A%84sql%E6%B3%A8%E5%85%A5%E8%AF%AD%E5%8F%A5%EF%BC%8C%E5%8F%AF%E8%83%BD%E6%98%AF%E5%9B%A0%E4%B8%BA%E8%BF%94%E5%9B%9Exml%E6%A0%BC%E5%BC%8F%E7%9A%84%E6%95%B0%E6%8D%AE%EF%BC%8C%E6%89%80%E4%BB%A5%E4%B8%8D%E5%AD%98%E5%9C%A8%E8%A1%A8%E9%9D%A2%E7%9A%84%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E%EF%BC%8C%E4%B8%8D%E8%BF%87%E6%B1%82%E9%BB%91%E9%98%94%E4%BB%AC%E4%B8%8D%E8%A6%81%E5%BD%93%E9%9D%B6%E6%9C%BAT_T">http://www.cnblogs.com/mchina/p/3332283.html这个系列的文章，大部分代码都是复制粘贴来的，不过有部分代码他的文章中有错误细致观察吧。至于封装成类？就算了吧，我懒。测试过一些简单的sql注入语句，可能是因为返回xml格式的数据，所以不存在表面的注入漏洞，不过求黑阔们不要当靶机T_T</a></p>
-<p>这个功能的实现主要需要两个步骤，一是连接数据库，二是查询。</p>
-<h4 id="step1：数据库连接"><a href="#step1：数据库连接" class="headerlink" title="step1：数据库连接"></a>step1：数据库连接</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line"> function MysqlConnect()</span><br><span class="line"> &#123;</span><br><span class="line">     $dbname = &quot;wchat&quot;;</span><br><span class="line">     $host = &quot;xx.xx.xx.xx&quot;;</span><br><span class="line">     $user = &quot;username&quot;;</span><br><span class="line">     $pwd = &quot;password&quot;;</span><br><span class="line">     $link = @mysql_connect($host,$user,$pwd,true);</span><br><span class="line">     if(!$link) &#123;</span><br><span class="line">       die(&quot;Connect Server Failed: &quot; . mysql_error());</span><br><span class="line">     &#125;</span><br><span class="line">     /*连接成功后立即调用mysql_select_db()选中需要连接的数据库*/</span><br><span class="line">     if(!mysql_select_db($dbname,$link)) &#123;</span><br><span class="line">       die(&quot;Select Database Failed: &quot; . mysql_error($link));</span><br><span class="line">     &#125;</span><br><span class="line"> &#125;</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
-
-<h4 id="step2：查询。"><a href="#step2：查询。" class="headerlink" title="step2：查询。"></a>step2：查询。</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line"> function Research($keyword)</span><br><span class="line"> &#123;</span><br><span class="line">     $keyword = explode(&quot;+&quot;, $keyword); </span><br><span class="line">     str_ireplace(array(&quot;&#x27;&quot;,&quot;\&quot;&quot;,&quot;or&quot;,&quot;=&quot;,&quot;select&quot;,&quot;union&quot;),&quot;&quot;,$keyword);</span><br><span class="line">     include(&quot;MysqlConnect.php&quot;);</span><br><span class="line">     MysqlConnect();</span><br><span class="line">     //检索数据</span><br><span class="line">     $select_sql = &quot;select id,name,grade from test1 where name =\&quot;$keyword[1]\&quot;&quot;;</span><br><span class="line">     mysql_query(&quot;set names utf8&quot;);</span><br><span class="line">     $select_res = mysql_query($select_sql) or die(&#x27;SQL语句有错误，错误信息：&#x27;.mysql_error());</span><br><span class="line">     $rows = mysql_fetch_assoc($select_res);</span><br><span class="line">     if($rows!=&#x27;&#x27;)</span><br><span class="line">     &#123;</span><br><span class="line">          $contentStr = &quot;学号：&quot;.$rows[&#x27;id&#x27;].&quot;\t&quot;.&quot;班级：&quot;.$rows[&#x27;grade&#x27;].&quot;\t&quot;.&quot;姓名：&quot;.$rows[&#x27;name&#x27;].&quot;\t&quot;;</span><br><span class="line">     &#125;</span><br><span class="line">     else</span><br><span class="line">     &#123;</span><br><span class="line">          $contentStr = &quot;计算机学院没有该姓名的学生&quot;;</span><br><span class="line">     &#125;</span><br><span class="line">     return $contentStr;</span><br><span class="line"> &#125;</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
-
-<h4 id="step3：对index-php中的recievetext函数进行修改"><a href="#step3：对index-php中的recievetext函数进行修改" class="headerlink" title="step3：对index.php中的recievetext函数进行修改"></a>step3：对index.php中的recievetext函数进行修改</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">private function receiveText($object)</span><br><span class="line">    &#123;</span><br><span class="line">        $funcFlag = 0;</span><br><span class="line">        $keyword = trim($object-&gt;Content);</span><br><span class="line">        if(strstr($keyword, &quot;查询&quot;))</span><br><span class="line">        &#123;</span><br><span class="line">            include(&quot;Research.php&quot;);</span><br><span class="line">            $contentStr = Research($keyword);</span><br><span class="line">        &#125;</span><br><span class="line">        $resultStr = $this-&gt;transmitText($object, $contentStr, $funcFlag);</span><br><span class="line">        return $resultStr;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-<p>最后不得不说我测试的时候面对这个乱码问题真是不知所措，男朋友给我改了好久！！！最后在上边那个网址文章的第5小结所有的函数开始加了句<code>mysql_query(“set names utf8”);</code>乱码才正常了！</p>
-<p>测试结果<br><img src="/2016/06/22/wchat-3/w2-576x1024.jpg"></p>
-<p><img src="/2016/06/22/wchat-3/w3.png"></p>
-<p>使用excel导入<br><img src="/2016/06/22/wchat-3/w7.png"></p>
-<p><img src="/2016/06/22/wchat-3/w8.png"></p>
-<p>注：可能存在sql注入，可以再做一些更严谨的过滤。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">php</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/06/22/wchat-3/">展开全文 >></a>
         </p>
       
 
