@@ -148,6 +148,111 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-crypto-rsa-4" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/09/01/crypto-rsa-4/">socket RSA加密通信</a>
+    </h1>
+  
+
+        
+        <a href="/2016/09/01/crypto-rsa-4/" class="archive-article-date">
+  	<time datetime="2016-09-01T05:05:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-09-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+            
+        <p>用python编写socket加密通信主要有两点，第一步是通过socket库实现socket通信，第二步将通信的内容使用pycrypto库进行RSA加解密操作。</p>
+<h3 id="step1："><a href="#step1：" class="headerlink" title="step1："></a>step1：</h3><p>socket通信原理图<br><img src="/2016/09/01/crypto-rsa-4/1-291x300.png"></p>
+<p>可能不是一个客户端在登录，所以我们这里使用多线程，确保客户端相互不干扰。</p>
+<p>下边是一个简单的聊天小程序。</p>
+<h4 id="客户端"><a href="#客户端" class="headerlink" title="客户端"></a>客户端</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">#-*-encoding:utf-8 -*-</span><br><span class="line">import socket,os,threading</span><br><span class="line">class RecvMsg(threading.Thread):</span><br><span class="line">    def __init__(self,threadName,client):</span><br><span class="line">        threading.Thread.__init__(self)</span><br><span class="line">        self.name=threadName</span><br><span class="line">        self.client=client</span><br><span class="line">    def run(self):</span><br><span class="line">        while 1:</span><br><span class="line">              data = client.recv(1024)</span><br><span class="line">              if data:</span><br><span class="line">                   print data</span><br><span class="line">                   #如果有信息,就打印出来,这个主线程只需要做这个</span><br><span class="line">              else:</span><br><span class="line">                   pass</span><br><span class="line">        client.close()</span><br><span class="line">class SendMsg(threading.Thread):</span><br><span class="line">    def __init__(self,threadName,client):</span><br><span class="line">        threading.Thread.__init__(self)</span><br><span class="line">        self.name=threadName</span><br><span class="line">        self.client=client</span><br><span class="line">        def run(self):</span><br><span class="line">        while 1:</span><br><span class="line">              data=raw_input(&quot;&quot;)</span><br><span class="line">              self.client.sendall(data)</span><br><span class="line">client=socket.socket(socket.AF_INET, socket.SOCK_STREAM)</span><br><span class="line">address=(&#x27;127.0.0.1&#x27;,12001)</span><br><span class="line">client.connect(address)</span><br><span class="line">s=SendMsg(&quot;msg1&quot;,client)</span><br><span class="line">s.start() #调用start方法新建一个子线程,注意,run方法本身是单线程</span><br><span class="line">w=RecvMsg(&quot;msg2&quot;,client)</span><br><span class="line">w.start()</span><br></pre></td></tr></table></figure>
+
+<h4 id="服务器端："><a href="#服务器端：" class="headerlink" title="服务器端："></a>服务器端：</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line">#-*-encoding:utf-8 -*-</span><br><span class="line">import socket</span><br><span class="line">import threading</span><br><span class="line">import os</span><br><span class="line">import Queue</span><br><span class="line">msglist=Queue.Queue(maxsize = 0)</span><br><span class="line">clientlist=[]</span><br><span class="line">class HandleMsg(threading.Thread):</span><br><span class="line">    def __init__(self,threadName,conn):</span><br><span class="line">        threading.Thread.__init__(self)</span><br><span class="line">        self.name=threadName</span><br><span class="line">        self.conn=conn</span><br><span class="line">        self.alive=True</span><br><span class="line">    def broadcast(self):</span><br><span class="line">        msg=msglist.get()</span><br><span class="line">        print msg</span><br><span class="line">        for i in clientlist:</span><br><span class="line">            try:</span><br><span class="line">                i.sendall(msg)</span><br><span class="line">            except:</span><br><span class="line">                print self.name+&quot; has disconnected&quot;</span><br><span class="line">                clientlist.remove(i)</span><br><span class="line">            else:</span><br><span class="line">                pass</span><br><span class="line">   def stop(self):</span><br><span class="line">       self.alive=False</span><br><span class="line">       print self.name+&quot; has disconnected&quot;</span><br><span class="line">   def run(self):</span><br><span class="line">       while self.alive:</span><br><span class="line">          try:</span><br><span class="line">              data=self.conn.recv(1024)</span><br><span class="line">          except:</span><br><span class="line">              self.stop()</span><br><span class="line">              self.conn.close()</span><br><span class="line">              clientlist.remove(self.conn)</span><br><span class="line">          else:</span><br><span class="line">              msglist.put(self.name+&quot; says:&quot;+data)</span><br><span class="line">              self.broadcast()</span><br><span class="line">server=socket.socket(socket.AF_INET, socket.SOCK_STREAM)</span><br><span class="line">address=(&#x27;&#x27;,12001)</span><br><span class="line">server.bind(address)</span><br><span class="line">server.listen(30) #这里代表最多响应的连接个数</span><br><span class="line">while 1:</span><br><span class="line">   conn, addr = server.accept()</span><br><span class="line">   (host,port)=addr</span><br><span class="line">   #这里使用host来获取连接的ip</span><br><span class="line">   #然后每次有人连接进来服务器就打印一个连接进来的消息</span><br><span class="line">   print host+&quot; has connected into server&quot;</span><br><span class="line">   clientlist.append(conn) #这里把每个连接的客户端加入一个列表</span><br><span class="line">   #广播的时候就直接遍历发送</span><br><span class="line">   HandleMsg(host,conn).start()</span><br></pre></td></tr></table></figure>
+
+<h3 id="step2-加密（对1中的功能做部分修改）"><a href="#step2-加密（对1中的功能做部分修改）" class="headerlink" title="step2:加密（对1中的功能做部分修改）"></a>step2:加密（对1中的功能做部分修改）</h3><p>秘钥产生过程<br><img src="/2016/09/01/crypto-rsa-4/2-300x159.png"></p>
+<p>在消息处理的类中写一个秘钥产生的函数，在重写run方法的函数中先调用秘钥产生函数，实现客户与服务器间交换秘钥。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">def crypmodel(self):</span><br><span class="line"> global random_generator</span><br><span class="line"> random_generator = Random.new().read</span><br><span class="line"> rsa = RSA.generate(1024, random_generator)</span><br><span class="line"> # generating key pair</span><br><span class="line"> private_pem = rsa.exportKey()</span><br><span class="line"> public_pem = rsa.publickey().exportKey()</span><br><span class="line"> return [private_pem,public_pem]</span><br></pre></td></tr></table></figure>
+
+<p>客户端向服务器发送消息</p>
+<p><img src="/2016/09/01/crypto-rsa-4/3-300x153.png"></p>
+<p>服务器向客户端发送消息</p>
+<p><img src="/2016/09/01/crypto-rsa-4/4-300x148.png"></p>
+<p>客户端向服务器发送消息，需要使用服务器端发来的公钥进行加密，服务器端使用自己的私钥进行解密。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#加密</span><br><span class="line">def encrypto(self,txt,public_pemC):</span><br><span class="line"> rsakey = RSA.importKey(public_pemC)</span><br><span class="line"> cipher = Cipher_pkcs1_v1_5.new(rsakey)</span><br><span class="line"> return base64.b64encode(cipher.encrypt(txt))</span><br><span class="line">#解密</span><br><span class="line">def decrypto(self,txt,private_pemS):</span><br><span class="line"> global random_generator</span><br><span class="line"> rsakey = RSA.importKey(private_pemS)</span><br><span class="line"> cipher = Cipher_pkcs1_v1_5.new(rsakey)</span><br><span class="line"> return cipher.decrypt(base64.b64decode(txt), random_generator)</span><br></pre></td></tr></table></figure>
+<p>这里我是让服务器端去教学信息网，就是实现了一个客户端发送加密后的用户名密码给服务器端，服务器端接收用户名密码后进行用户登录，然后把查找的内容逐条加密发送给客户端。</p>
+<p>–end—之前是客户端与服务器建立连接后，服务器将加密的公钥发给客户端，以后是客户端发送的用户名密码的密文以及解密的明文。</p>
+<p><img src="/2016/09/01/crypto-rsa-4/5-1.png"></p>
+<p>客户端首先接收密文并解密的结果</p>
+<p><img src="/2016/09/01/crypto-rsa-4/6.png"></p>
+<p>当然了，通信过程做好还要加上数字签名，但是只是为了完成小学期作业，所以就没有进行到这么繁琐的地步。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">crypto</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/09/01/crypto-rsa-4/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+<!-- 目录内容 -->
+             
+        <!-- 目录内容结束 -->
+
+  
     <article id="post-wchat-3" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
