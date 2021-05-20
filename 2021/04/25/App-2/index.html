@@ -1,0 +1,1697 @@
+<!DOCTYPE html>
+<html lang="">
+    <!-- title -->
+
+
+
+
+<!-- keywords -->
+
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" >
+    <meta name="author" content="暮晨儿">
+    <meta name="renderer" content="webkit">
+    <meta name="copyright" content="暮晨儿">
+    
+    <meta name="keywords" content="moench">
+    
+    <meta name="description" content="一个什么都梦想的妹子！">
+    <meta name="description" content="APP安全认证的工作流程梳理 （点链接查看） 当前监管的重点变化梳理(下文)  0 前言关于App安全合规的监管要求很多地方都可以找到，这里就不一一赘述了。本文的重点内容是通过对监管机构发出来的通报进行统计分析，解读监管走向。 嗯哼，想要解读监管走向，首先就要了解现在都有哪些监管机构：  App违法违规收集使用个人信息治理工作组（App治理小组）  工业和信息化部信息通信管理局（工信部） 国家移">
+<meta property="og:type" content="article">
+<meta property="og:title" content="App安全合规—part2 当前监管的重点变化梳理">
+<meta property="og:url" content="http://www.6do0.cn/2021/04/25/App-2/index.html">
+<meta property="og:site_name" content="muchener&#39;s blogs">
+<meta property="og:description" content="APP安全认证的工作流程梳理 （点链接查看） 当前监管的重点变化梳理(下文)  0 前言关于App安全合规的监管要求很多地方都可以找到，这里就不一一赘述了。本文的重点内容是通过对监管机构发出来的通报进行统计分析，解读监管走向。 嗯哼，想要解读监管走向，首先就要了解现在都有哪些监管机构：  App违法违规收集使用个人信息治理工作组（App治理小组）  工业和信息化部信息通信管理局（工信部） 国家移">
+<meta property="og:locale">
+<meta property="og:image" content="http://www.6do0.cn/2021/04/25/App-2/1.jpg">
+<meta property="og:image" content="http://www.6do0.cn/2021/04/25/App-2/image-20210419163850495.png">
+<meta property="og:image" content="http://www.6do0.cn/2021/04/25/App-2/2.png">
+<meta property="og:image" content="http://www.6do0.cn/2021/04/25/App-2/6291618832498_.png">
+<meta property="og:image" content="http://www.6do0.cn/2021/04/25/App-2/1.png">
+<meta property="article:published_time" content="2021-04-25T14:56:56.000Z">
+<meta property="article:modified_time" content="2021-05-06T09:52:34.362Z">
+<meta property="article:author" content="暮晨儿">
+<meta property="article:tag" content="App安全合规">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://www.6do0.cn/2021/04/25/App-2/1.jpg">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    
+    <title>App安全合规—part2 当前监管的重点变化梳理 · muchener&#39;s blogs</title>
+    <style type="text/css">
+    @font-face {
+        font-family: 'Oswald-Regular';
+        src: url("/font/Oswald-Regular.ttf");
+    }
+
+    body {
+        margin: 0;
+    }
+
+    header,
+    footer,
+    .back-top,
+    .sidebar,
+    .container,
+    .site-intro-meta,
+    .toc-wrapper {
+        display: none;
+    }
+
+    .site-intro {
+        position: relative;
+        z-index: 3;
+        width: 100%;
+        /* height: 50vh; */
+        overflow: hidden;
+    }
+
+    .site-intro-placeholder {
+        position: absolute;
+        z-index: -2;
+        top: 0;
+        left: 0;
+        width: calc(100% + 300px);
+        height: 100%;
+        background: repeating-linear-gradient(-45deg, #444 0, #444 80px, #333 80px, #333 160px);
+        background-position: center center;
+        transform: translate3d(-226px, 0, 0);
+        animation: gradient-move 2.5s ease-out 0s infinite;
+    }
+
+    @keyframes gradient-move {
+        0% {
+            transform: translate3d(-226px, 0, 0);
+        }
+        100% {
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+</style>
+
+    <link rel="preload" href= "/css/style.css?v=20180824" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <link rel="stylesheet" href= "/css/mobile.css?v=20180824" media="(max-width: 980px)">
+    
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    
+    <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+/* This file is meant as a standalone workflow for
+- testing support for link[rel=preload]
+- enabling async CSS loading in browsers that do not support rel=preload
+- applying rel preload css once loaded, whether supported or not.
+*/ -->
+<script>
+(function( w ){
+	"use strict";
+	// rel=preload support test
+	if( !w.loadCSS ){
+		w.loadCSS = function(){};
+	}
+	// define on the loadCSS obj
+	var rp = loadCSS.relpreload = {};
+	// rel=preload feature support test
+	// runs once and returns a function for compat purposes
+	rp.support = (function(){
+		var ret;
+		try {
+			ret = w.document.createElement( "link" ).relList.supports( "preload" );
+		} catch (e) {
+			ret = false;
+		}
+		return function(){
+			return ret;
+		};
+	})();
+
+	// if preload isn't supported, get an asynchronous load by using a non-matching media attribute
+	// then change that media back to its intended value on load
+	rp.bindMediaToggle = function( link ){
+		// remember existing media attr for ultimate state, or default to 'all'
+		var finalMedia = link.media || "all";
+
+		function enableStylesheet(){
+			link.media = finalMedia;
+		}
+
+		// bind load handlers to enable media
+		if( link.addEventListener ){
+			link.addEventListener( "load", enableStylesheet );
+		} else if( link.attachEvent ){
+			link.attachEvent( "onload", enableStylesheet );
+		}
+
+		// Set rel and non-applicable media type to start an async request
+		// note: timeout allows this to happen async to let rendering continue in IE
+		setTimeout(function(){
+			link.rel = "stylesheet";
+			link.media = "only x";
+		});
+		// also enable media after 3 seconds,
+		// which will catch very old browsers (android 2.x, old firefox) that don't support onload on link
+		setTimeout( enableStylesheet, 3000 );
+	};
+
+	// loop through link elements in DOM
+	rp.poly = function(){
+		// double check this to prevent external calls from running
+		if( rp.support() ){
+			return;
+		}
+		var links = w.document.getElementsByTagName( "link" );
+		for( var i = 0; i < links.length; i++ ){
+			var link = links[ i ];
+			// qualify links to those with rel=preload and as=style attrs
+			if( link.rel === "preload" && link.getAttribute( "as" ) === "style" && !link.getAttribute( "data-loadcss" ) ){
+				// prevent rerunning on link
+				link.setAttribute( "data-loadcss", true );
+				// bind listeners to toggle media back
+				rp.bindMediaToggle( link );
+			}
+		}
+	};
+
+	// if unsupported, run the polyfill
+	if( !rp.support() ){
+		// run once at least
+		rp.poly();
+
+		// rerun poly on an interval until onload
+		var run = w.setInterval( rp.poly, 500 );
+		if( w.addEventListener ){
+			w.addEventListener( "load", function(){
+				rp.poly();
+				w.clearInterval( run );
+			} );
+		} else if( w.attachEvent ){
+			w.attachEvent( "onload", function(){
+				rp.poly();
+				w.clearInterval( run );
+			} );
+		}
+	}
+
+
+	// commonjs
+	if( typeof exports !== "undefined" ){
+		exports.loadCSS = loadCSS;
+	}
+	else {
+		w.loadCSS = loadCSS;
+	}
+}( typeof global !== "undefined" ? global : this ) );
+</script>
+
+    <link rel="icon" href= "/intro/2.jpg" />
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js" as="script" />
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js" as="script" />
+    <link rel="preload" href="/scripts/main.js" as="script" />
+    <link rel="preload" as="font" href="/font/Oswald-Regular.ttf" crossorigin>
+    <link rel="preload" as="font" href="https://at.alicdn.com/t/font_327081_1dta1rlogw17zaor.woff" crossorigin>
+    
+    <!-- fancybox -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" defer></script>
+    <!-- 百度统计  -->
+    
+    <!-- 谷歌统计  -->
+    
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+    
+        <body class="post-body">
+    
+    
+<header class="header">
+
+    <div class="read-progress"></div>
+    <div class="header-sidebar-menu">&#xe775;</div>
+    <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >muchener&#39;s blogs</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">App安全合规—part2 当前监管的重点变化梳理</a>
+            </div>
+    </div>
+    
+    <a class="home-link" href=/>muchener's blogs</a>
+</header>
+    <div class="wrapper">
+        <div class="site-intro" style="
+
+
+
+
+
+
+
+height:50vh;
+">
+    
+    <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
+            
+    <div class="site-intro-placeholder"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
+    <div class="site-intro-meta">
+        <!-- 标题  -->
+        <h1 class="intro-title">
+            <!-- 主页  -->
+            
+            App安全合规—part2 当前监管的重点变化梳理
+            <!-- 404 -->
+            
+        </h1>
+        <!-- 副标题 -->
+        <p class="intro-subtitle">
+            <!-- 主页副标题  -->
+            
+            
+            <!-- 404 -->
+            
+        </p>
+        <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "App安全合规">App安全合规</a>
+    
+</div>
+                
+                
+                    <div class="post-intro-read">
+                        <span>字数统计: <span class="post-count word-count">1.7k</span>阅读时长: <span class="post-count reading-time">5 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2021/04/25</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer">&#xe602;</span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
+        
+    </div>
+</div>
+        <script>
+ 
+  // get user agent
+  var browser = {
+    versions: function () {
+      var u = window.navigator.userAgent;
+      return {
+        userAgent: u,
+        trident: u.indexOf('Trident') > -1, //IE内核
+        presto: u.indexOf('Presto') > -1, //opera内核
+        webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+        gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+        mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+        ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+        android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+        iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, //是否为iPhone或者安卓QQ浏览器
+        iPad: u.indexOf('iPad') > -1, //是否为iPad
+        webApp: u.indexOf('Safari') == -1, //是否为web应用程序，没有头部与底部
+        weixin: u.indexOf('MicroMessenger') == -1, //是否为微信浏览器
+        uc: u.indexOf('UCBrowser') > -1 //是否为android下的UC浏览器
+      };
+    }()
+  }
+  console.log("userAgent:" + browser.versions.userAgent);
+
+  // callback
+  function fontLoaded() {
+    console.log('font loaded');
+    if (document.getElementsByClassName('site-intro-meta')) {
+      document.getElementsByClassName('intro-title')[0].classList.add('intro-fade-in');
+      document.getElementsByClassName('intro-subtitle')[0].classList.add('intro-fade-in');
+      var postIntros = document.getElementsByClassName('post-intros')[0]
+      if (postIntros) {
+        postIntros.classList.add('post-fade-in');
+      }
+    }
+  }
+
+  // UC不支持跨域，所以直接显示
+  function asyncCb(){
+    if (browser.versions.uc) {
+      console.log("UCBrowser");
+      fontLoaded();
+    } else {
+      WebFont.load({
+        custom: {
+          families: ['Oswald-Regular']
+        },
+        loading: function () {  //所有字体开始加载
+          // console.log('loading');
+        },
+        active: function () {  //所有字体已渲染
+          fontLoaded();
+        },
+        inactive: function () { //字体预加载失败，无效字体或浏览器不支持加载
+          console.log('inactive: timeout');
+          fontLoaded();
+        },
+        timeout: 5000 // Set the timeout to two seconds
+      });
+    }
+  }
+
+  function asyncErr(){
+    console.warn('script load from CDN failed, will load local script')
+  }
+
+  // load webfont-loader async, and add callback function
+  function async(u, cb, err) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (cb) { o.addEventListener('load', function (e) { cb(null, e); }, false); }
+    if (err) { o.addEventListener('error', function (e) { err(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  var asyncLoadWithFallBack = function(arr, success, reject) {
+      var currReject = function(){
+        reject()
+        arr.shift()
+        if(arr.length)
+          async(arr[0], success, currReject)
+        }
+
+      async(arr[0], success, currReject)
+  }
+
+  asyncLoadWithFallBack([
+    "https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js", 
+    "https://cdn.bootcss.com/webfont/1.6.28/webfontloader.js",
+    "/lib/webfontloader.min.js"
+  ], asyncCb, asyncErr)
+</script>        
+        <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
+        <div class="container container-unloaded">
+            <main class="main post-page">
+    <article class="article-entry">
+        <ol>
+<li><a target="_blank" rel="noopener" href="https://www.freebuf.com/articles/compliance/269309.html">APP安全认证的工作流程梳理</a> （点链接查看）</li>
+<li>当前监管的重点变化梳理(下文)</li>
+</ol>
+<h2 id="0-前言"><a href="#0-前言" class="headerlink" title="0 前言"></a>0 前言</h2><p>关于App安全合规的监管要求很多地方都可以找到，这里就不一一赘述了。本文的重点内容是通过对监管机构发出来的通报进行统计分析，解读监管走向。</p>
+<p>嗯哼，想要解读监管走向，首先就要了解现在都有哪些监管机构：</p>
+<ol>
+<li>App违法违规收集使用个人信息治理工作组（App治理小组）</li>
+<li> 工业和信息化部信息通信管理局（工信部）</li>
+<li>国家移动互联网应用安全管理中心（病毒中心）</li>
+<li>地方通管局（如广东省通管局、天津通管局等）</li>
+<li>地方网安（主要关注公司所属地的，当然也不排除有跨地域通报的情况呀）</li>
+</ol>
+<h2 id="1-通报情况"><a href="#1-通报情况" class="headerlink" title="1 通报情况"></a>1 通报情况</h2><blockquote>
+<p>App治理小组发布的问题详情是监管机构里列举的很清晰的了，所以下文大部分以app治理小组通报的问题为基础进行统计分析。</p>
+</blockquote>
+<h3 id="1-1-基本情况"><a href="#1-1-基本情况" class="headerlink" title="1.1 基本情况"></a>1.1 基本情况</h3><p>2019-2020年，App治理小组共发布通报3次，涉及应用软件17个分类共计173款，实用工具、金融理财、学习教育类的App占绝大多数。</p>
+<p>2019年-今，工信部共发布12批次通报，涉及应用软件819款。</p>
+<p>关于问题类型，这里引用知乎上的一篇文章<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/317139092">《对比可视化：App专项治理工作组检查》</a>的统计（法学博士就是不一样，太厉害了，统计的好棒，我搞了半天excel透视表数还是对不上！！）</p>
+<p><img src="/2021/04/25/App-2/1.jpg" alt="img"></p>
+<p>注：上图来源于知乎用户发表在知乎上的文章，<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/317139092">传送门</a>。</p>
+<p>照猫画虎把工信部的也列个表</p>
+<img src="/2021/04/25/App-2/image-20210419163850495.png" alt="image-20210419182006710" style="zoom:67%;">
+
+<h3 id="1-2-现状总结"><a href="#1-2-现状总结" class="headerlink" title="1.2 现状总结"></a>1.2 现状总结</h3><ol>
+<li><p>不给权限不让用、违规收集个人信息、违规使用个人信息、超范围收集个人信息依旧是普遍存在的问题。</p>
+<p>问题小项：<strong>同意隐私政策前应用自身收集个人信息的情况</strong>（13、15）、<strong>同意隐私政策前第三方SDK收集个人信息情况</strong>（11）、<strong>因用户不同意某权限而拒绝提供业务功能</strong>（26）。</p>
+<p>个人信息收集问题会在part4 个人信息收集方面踩过的坑 里详细讲解，这里简单说下：很多app的是否可以通过统一收口部门的开发解决、第三方SDK可以关注下官网有一些是给出了解决方案的。</p>
+<img src="/2021/04/25/App-2/2.png" alt="2" style="zoom:50%;"></li>
+<li><p>获取敏感个人信息、敏感权限时，未同步告知其使用目的（1、5）的问题一直居首位。</p>
+<p>建议：业务认真查找敏感个人信息收集和敏感权限获取触发点，整理目的并找合规法务角色给出文案。现在部分应用商店就做的很好，上传app时就强制填写权限获取目的并在触发时弹窗提示。</p>
+<p><img src="/2021/04/25/App-2/6291618832498_.png" alt="6291618832498_.pic"></p>
+</li>
+<li><p>首次运行app无隐私弹窗、默认隐私勾选（16）、隐私政策访问难阅读难的问题逐渐减少了。</p>
+<p>还需关注的问题：即使又弹窗登录时的<strong>登录即同意</strong>也不行！！！梳理好所有登录、注册的入口检查是否统一。</p>
+</li>
+<li><p>未逐一列出嵌入的第三方SDK收集使用个人信息的目的、类型的问题依旧很多，但是目前已经看到很多App列了<strong>第三方SDK列表</strong>，并且很多常用的第三方SDK也给出了<strong>安全合规指南</strong>。</p>
+<p>问题小项：SDK梳理全了吗？收集哪些信息、有什么使用目的是否列全了？</p>
+<img src="/2021/04/25/App-2/1.png" alt="1" style="zoom:50%;"></li>
+<li><p>收集某项个人信息的频度超出业务功能实际需要问题（24）仍需要重视，此问题可能需要深入测试加上对频度没有一个唯一的标准，所以被检测出来的在少数，通过近期发布的个人信息安全测评规范征求意见稿中也对App在不同场景下收集个人信息的频率着重强调，并且给了部分参考。</p>
+</li>
+<li><p>App通过欺诈、诱骗、误导方式收集个人信息在上边两个图中也是存在的，但猜测人工成本比较高可能命中率没有那么高，但是在个人信息安全测评规范征求意见稿也用一页的附录进行上述行为的举例，可以看出此项也可能是后续检查的方向。</p>
+</li>
+</ol>
+<h3 id="1-3-其他猜测"><a href="#1-3-其他猜测" class="headerlink" title="1.3 其他猜测"></a>1.3 其他猜测</h3><p>除了上述监管机构的检查项，猜测可能后续检查重点还可能包括以下问题：</p>
+<ol>
+<li>静默权限/个人信息获取问题</li>
+<li>App个人信息获取使用问题</li>
+<li>数据接口安全问题（如数据冗余、前端“脱敏”等)</li>
+</ol>
+<h2 id="2-有意思的不合规理由-千万不要存在侥幸心理"><a href="#2-有意思的不合规理由-千万不要存在侥幸心理" class="headerlink" title="2 有意思的不合规理由(千万不要存在侥幸心理)"></a>2 有意思的不合规理由(千万不要存在侥幸心理)</h2><p>app治理小组查的真的很细致，给大家分享一些检测出来的不合规理由，有一些都不知道是怎么查到的，也欢迎大家来猜测。</p>
+<ul>
+<li>未提供有效的注销用户账号功能：根据所提供的注销方式，向官方邮箱发送邮件进行注销，超过15日未收到回复。（要有人定期查看啊）</li>
+<li>收集使用个人信息的目的、方式和范围发生变化时，未以更新隐私政策等方式通知用户：更新后新增了定制化课单功能，将收集用户的课程记录，但未以任何方式告知用户。（这个真是不知道怎么被查到的）</li>
+<li>征得用户同意前就开始收集用户的网页点击记录；</li>
+<li>未提供有效的更正、删除个人信息及注销用户账号功能：向隐私政策中说明的个人信息保护邮箱发送邮件，直接被系统退信；（留的联系方式要自测下是否可以跑的通）</li>
+<li>为注销用户账号设置不合理条件：需提交用户联系方式、注册时间、注册所在地、登录过的设备型号、充值证明等信息，才允许注销；（当年的安全验证和身份识别变成了不合理条件）</li>
+<li>用户撤销位置权限授权，明确表示不同意收集该类个人信息后，仍通过其他途径收集用户地理位置等个人信息并发送至第三方服务器；</li>
+<li>未建立并公布有效的个人信息安全投诉、举报渠道：在线反馈问题显示“客服不在线，系统将自动断开会话”的提示信息；每隔15分钟拨打客服电话，均提示“坐席忙，继续等待请按1，结束请挂机”；</li>
+</ul>
+
+    </article>
+    <!-- license  -->
+    
+        <div class="license-wrapper">
+            <p>原文作者：<a href="http://www.6do0.cn">暮晨儿</a>
+            <p>原文链接：<a href="http://www.6do0.cn/2021/04/25/App-2/">http://www.6do0.cn/2021/04/25/App-2/</a>
+            <p>发表日期：<a href="http://www.6do0.cn/2021/04/25/App-2/">April 25th 2021, 10:56:56 pm</a>
+            <p>更新日期：<a href="http://www.6do0.cn/2021/04/25/App-2/">May 6th 2021, 5:52:34 pm</a>
+            <p>版权声明：本文采用<a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
+        </div>
+    
+    <!-- paginator  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+                <div class="nextSlogan">Next Post</div>
+                <a href= "/2021/05/06/App-5/" title= "App安全合规-Part5:如何做好App整改应急响应工作">
+                    <div class="nextTitle">App安全合规-Part5:如何做好App整改应急响应工作</div>
+                </a>
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href= "/2021/04/05/APP-1/" title= "App安全合规 part1 App安全认证">
+                    <div class="prevTitle">App安全合规 part1 App安全认证</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
+    
+    
+    <!-- gitalk评论 -->
+
+    <!-- utteranc评论 -->
+
+    <!-- partial('_partial/comment/changyan') -->
+    <!--PC版-->
+
+
+    
+    
+
+    <!-- 评论 -->
+</main>
+            <!-- profile -->
+            
+        </div>
+        <footer class="footer footer-unloaded">
+    <!-- social  -->
+    
+    <div class="social">
+        
+    
+        
+            
+                <a href="mailto:moench@88.com" class="iconfont-archer email" title=email ></a>
+            
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+    </div>
+    
+    <!-- powered by Hexo  -->
+    <div class="copyright">
+        <span id="hexo-power">Powered by <a href="https://hexo.io/" target="_blank">Hexo</a></span><span class="iconfont-archer power">&#xe635;</span><span id="theme-info">theme <a href="https://github.com/fi3ework/hexo-theme-archer" target="_blank">Archer</a></span>
+    </div>
+    <!-- 不蒜子  -->
+    
+    <div class="busuanzi-container">
+    
+     
+    <span id="busuanzi_container_site_pv">PV: <span id="busuanzi_value_site_pv"></span> :)</span>
+    
+    </div>
+    
+</footer>
+    </div>
+    <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#0-%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">0 前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E9%80%9A%E6%8A%A5%E6%83%85%E5%86%B5"><span class="toc-number">2.</span> <span class="toc-text">1 通报情况</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E5%9F%BA%E6%9C%AC%E6%83%85%E5%86%B5"><span class="toc-number">2.1.</span> <span class="toc-text">1.1 基本情况</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E7%8E%B0%E7%8A%B6%E6%80%BB%E7%BB%93"><span class="toc-number">2.2.</span> <span class="toc-text">1.2 现状总结</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-%E5%85%B6%E4%BB%96%E7%8C%9C%E6%B5%8B"><span class="toc-number">2.3.</span> <span class="toc-text">1.3 其他猜测</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E4%B8%8D%E5%90%88%E8%A7%84%E7%90%86%E7%94%B1-%E5%8D%83%E4%B8%87%E4%B8%8D%E8%A6%81%E5%AD%98%E5%9C%A8%E4%BE%A5%E5%B9%B8%E5%BF%83%E7%90%86"><span class="toc-number">3.</span> <span class="toc-text">2 有意思的不合规理由(千万不要存在侥幸心理)</span></a></li></ol>
+    </div>
+    
+    <div class="back-top iconfont-archer">&#xe639;</div>
+    <div class="sidebar sidebar-hide">
+    <ul class="sidebar-tabs sidebar-tabs-active-0">
+        <li class="sidebar-tab-archives"><span class="iconfont-archer">&#xe67d;</span><span class="tab-name">Archive</span></li>
+        <li class="sidebar-tab-tags"><span class="iconfont-archer">&#xe61b;</span><span class="tab-name">Tag</span></li>
+        <li class="sidebar-tab-categories"><span class="iconfont-archer">&#xe666;</span><span class="tab-name">Cate</span></li>
+    </ul>
+    <div class="sidebar-content sidebar-content-show-archive">
+          <div class="sidebar-panel-archives">
+    <!-- 在ejs中将archive按照时间排序 -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="total-and-search">
+        <div class="total-archive">
+        Total : 48
+        </div>
+        <!-- search  -->
+        
+    </div>
+    
+    <div class="post-archive">
+    
+    
+    
+    
+    <div class="archive-year"> 2021 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/07</span><a class="archive-post-title" href= "/2021/05/07/App-7/" >一个安全合规人员应该具备的能力</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/06</span><a class="archive-post-title" href= "/2021/05/06/App-5/" >App安全合规-Part5:如何做好App整改应急响应工作</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/25</span><a class="archive-post-title" href= "/2021/04/25/App-2/" >App安全合规—part2 当前监管的重点变化梳理</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/05</span><a class="archive-post-title" href= "/2021/04/05/APP-1/" >App安全合规 part1 App安全认证</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> 2020 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/20</span><a class="archive-post-title" href= "/2020/01/20/SRC-6/" >SRC作用</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> 2019 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/20</span><a class="archive-post-title" href= "/2019/04/20/SRC-5/" >2019SRC 闭门讨论会</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> 2018 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/31</span><a class="archive-post-title" href= "/2018/10/31/SRC-4/" >SRC小白成长日记——经验值(贡献值)与积分(安全币)功能对运营的帮助</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/24</span><a class="archive-post-title" href= "/2018/10/24/SRC-3/" >SRC小白成日记——SRC线上漏洞活动</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/26</span><a class="archive-post-title" href= "/2018/09/26/SRC-2/" >SRC小白成日记——杂七杂八</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/16</span><a class="archive-post-title" href= "/2018/08/16/SRC-1/" >SRC小白成日记——零起步的第一次拉新活动</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> 2017 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">12/05</span><a class="archive-post-title" href= "/2017/12/05/ps-invotion/" >PS批量生成邀请函教程</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/22</span><a class="archive-post-title" href= "/2017/09/22/pm-%E5%88%9B%E4%BA%AC%E4%B8%9C%E6%9C%89%E6%84%9F/" >读《创京东》有感</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/09</span><a class="archive-post-title" href= "/2017/09/09/po-4/" >运营之光-第三章</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/27</span><a class="archive-post-title" href= "/2017/08/27/life-kcon2017/" >与KCon一起的第二个年头</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/13</span><a class="archive-post-title" href= "/2017/08/13/pm-reading-7/" >七天读书计划-《产品经理面试攻略》- 第七天</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/10</span><a class="archive-post-title" href= "/2017/08/10/pm-reading-4/" >七天读书计划-《产品经理面试攻略》- 第四&五天</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/09</span><a class="archive-post-title" href= "/2017/08/09/pm-reading-3/" >七天读书计划-《产品经理面试攻略》- 第三天</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/08</span><a class="archive-post-title" href= "/2017/08/08/pm-reading-2/" >七天读书计划-《产品经理面试攻略》- 第二天</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/07</span><a class="archive-post-title" href= "/2017/08/07/pm-reading-1/" >七天读书计划-《产品经理面试攻略》- 第一天</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/28</span><a class="archive-post-title" href= "/2017/07/28/po-experience-of-reading-campaign/" >如何办一场“好”活动(以去年书韵汇为例)</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/14</span><a class="archive-post-title" href= "/2017/07/14/life-715/" >blog搬到github了</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/10</span><a class="archive-post-title" href= "/2017/06/10/po-3/" >笔记：运营之光（第2章）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/31</span><a class="archive-post-title" href= "/2017/05/31/life-sth-with-senior/" >和学姐学长的两三事</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/31</span><a class="archive-post-title" href= "/2017/05/31/life-welcome-to-june/" >至即将到来的6月</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/23</span><a class="archive-post-title" href= "/2017/05/23/web-Burpsuite-SAML-plugin/" >Burpsuite SAML plugin</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/18</span><a class="archive-post-title" href= "/2017/05/18/web-On-Breaking-SAML-Be-Whoever-You-Want-to-Be/" >On Breaking SAML Be Whoever You Want to Be </a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/18</span><a class="archive-post-title" href= "/2017/05/18/po-2/" >笔记：运营之光（第1章）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/14</span><a class="archive-post-title" href= "/2017/05/14/po-1/" >笔记：运营之光（第0章）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/06</span><a class="archive-post-title" href= "/2017/05/06/web-bootstrap-1/" >bootstrap笔记</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/16</span><a class="archive-post-title" href= "/2017/02/16/life-hello-goodbye/" >你好！再见！</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/28</span><a class="archive-post-title" href= "/2017/01/28/da-shumo-2/" >数模笔记：差分方程</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/22</span><a class="archive-post-title" href= "/2017/01/22/da-shumo-1/" >数模笔记：多项式拟合（1）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/04</span><a class="archive-post-title" href= "/2017/01/04/prompt-to-win/" >prompt(1)-to-win</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> 2016 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/03</span><a class="archive-post-title" href= "/2016/11/03/os-lfu/" >操作系统LFU算法</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/03</span><a class="archive-post-title" href= "/2016/11/03/os-lru/" >操作系统LRU算法</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/03</span><a class="archive-post-title" href= "/2016/11/03/os-fifo/" >操作系统FIFO算法</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/01</span><a class="archive-post-title" href= "/2016/11/01/note-of-assembly/" >汇编学习笔记</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/28</span><a class="archive-post-title" href= "/2016/10/28/os-fcfs/" >操作系统FCFS调度算法</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/05</span><a class="archive-post-title" href= "/2016/10/05/crypto-rsa-2/" >RSA（二）之共模攻击</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/03</span><a class="archive-post-title" href= "/2016/10/03/crypto-rsa-3/" >RSA（三）之小公钥指数攻击</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/01</span><a class="archive-post-title" href= "/2016/09/01/crypto-rsa-4/" >socket RSA加密通信</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/22</span><a class="archive-post-title" href= "/2016/06/22/wchat-3/" >微信公众号连接数据库查询</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/02</span><a class="archive-post-title" href= "/2016/06/02/web-how-to-use-nmap/" >nmap的使用</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/23</span><a class="archive-post-title" href= "/2016/05/23/wchat-1/" >微信公众号实现快递查询功能</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/18</span><a class="archive-post-title" href= "/2016/05/18/web-http-request-reponse/" >HTTP消息头</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/13</span><a class="archive-post-title" href= "/2016/05/13/csharp-mysql-1/" >C#连接mysql数据库</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/17</span><a class="archive-post-title" href= "/2016/04/17/life-hello-world/" >hello world</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/04</span><a class="archive-post-title" href= "/2016/04/04/crypto-Virginia/" >维吉尼亚的破解</a>
+        </li>
+    
+    </div>
+  </div>
+        <div class="sidebar-panel-tags">
+    <div class="sidebar-tags-name">
+    
+        <span class="sidebar-tag-name" data-tags="App安全合规"><span class="iconfont-archer">&#xe606;</span>App安全合规</span>
+    
+        <span class="sidebar-tag-name" data-tags="SRC"><span class="iconfont-archer">&#xe606;</span>SRC</span>
+    
+        <span class="sidebar-tag-name" data-tags="crypto"><span class="iconfont-archer">&#xe606;</span>crypto</span>
+    
+        <span class="sidebar-tag-name" data-tags="python"><span class="iconfont-archer">&#xe606;</span>python</span>
+    
+        <span class="sidebar-tag-name" data-tags="mysql"><span class="iconfont-archer">&#xe606;</span>mysql</span>
+    
+        <span class="sidebar-tag-name" data-tags="C#"><span class="iconfont-archer">&#xe606;</span>C#</span>
+    
+        <span class="sidebar-tag-name" data-tags="DA"><span class="iconfont-archer">&#xe606;</span>DA</span>
+    
+        <span class="sidebar-tag-name" data-tags="life"><span class="iconfont-archer">&#xe606;</span>life</span>
+    
+        <span class="sidebar-tag-name" data-tags="bin"><span class="iconfont-archer">&#xe606;</span>bin</span>
+    
+        <span class="sidebar-tag-name" data-tags="os"><span class="iconfont-archer">&#xe606;</span>os</span>
+    
+        <span class="sidebar-tag-name" data-tags="PM"><span class="iconfont-archer">&#xe606;</span>PM</span>
+    
+        <span class="sidebar-tag-name" data-tags="po"><span class="iconfont-archer">&#xe606;</span>po</span>
+    
+        <span class="sidebar-tag-name" data-tags="web"><span class="iconfont-archer">&#xe606;</span>web</span>
+    
+        <span class="sidebar-tag-name" data-tags="php"><span class="iconfont-archer">&#xe606;</span>php</span>
+    
+        <span class="sidebar-tag-name" data-tags="PS"><span class="iconfont-archer">&#xe606;</span>PS</span>
+    
+    </div>
+    <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
+    <div class="tag-load-fail" style="display: none; color: #ccc; font-size: 0.6rem;">
+    缺失模块。<br/>
+    1、请确保node版本大于6.2<br/>
+    2、在博客根目录（注意不是archer根目录）执行以下命令：<br/>
+    <span style="color: #f75357; font-size: 1rem; line-height: 2rem;">npm i hexo-generator-json-content --save</span><br/>
+    3、在根目录_config.yml里添加配置：
+    <pre style="color: #787878; font-size: 0.6rem;">
+jsonContent:
+  meta: false
+  pages: false
+  posts:
+    title: true
+    date: true
+    path: true
+    text: false
+    raw: false
+    content: false
+    slug: false
+    updated: false
+    comments: false
+    link: false
+    permalink: false
+    excerpt: false
+    categories: true
+    tags: true</pre>
+    </div> 
+    <div class="sidebar-tags-list"></div>
+</div>
+        <div class="sidebar-panel-categories">
+    <div class="sidebar-categories-name">
+    
+        <span class="sidebar-category-name" data-categories="life"><span class="iconfont-archer">&#xe60a;</span>life</span>
+    
+        <span class="sidebar-category-name" data-categories="po"><span class="iconfont-archer">&#xe60a;</span>po</span>
+    
+    </div>
+    <div class="iconfont-archer sidebar-categories-empty">&#xe678;</div>
+    <div class="sidebar-categories-list"></div>
+</div>
+    </div>
+</div> 
+    <script>
+    var siteMeta = {
+        root: "/",
+        author: "暮晨儿"
+    }
+</script>
+    <!-- CDN failover -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+    <script type="text/javascript">
+        if (typeof window.$ === 'undefined')
+        {
+            console.warn('jquery load from jsdelivr failed, will load local script')
+            document.write('<script src="/lib/jquery.min.js">\x3C/script>')
+        }
+    </script>
+    <script src="/scripts/main.js"></script>
+    <!-- algolia -->
+    
+    <!-- busuanzi  -->
+    
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+    <!-- CNZZ  -->
+    
+    </div>
+    <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
+     
+    </body>
+</html>
+
+
