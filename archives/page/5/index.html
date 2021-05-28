@@ -356,6 +356,116 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2016/10/05/crypto-rsa-2/" >
+            
+                <span>RSA（二）之共模攻击</span>
+        </a>
+        <div class="abstract-content">
+            共模攻击原理
+n：大质数pq乘积
+
+
+m：明文
+
+
+d1：A的私钥
+
+
+d2：B的私钥
+
+
+c1：发给A的密文
+
+
+c2：发给B的密文
+
+
+e1：加密明文m的公钥（发给A）
+
+
+e2：加密明文m的公钥（发给B）
+
+加密过程c1=(m^e1)%n
+c2=(m^e2)%n
+解密过程A：m=(c1^d1)%n
+B：m=(c2^d2)%n
+共模攻击数学原理gcd(e1,e2)  = 1
+根据扩展欧几里得求出下边式子的一组解（s1，s2）
+
+根据公式我们可知道，我们只需要求出一组（s1,s2）即可计算出明文。
+找到了一个很不错的脚本
+12345678910111213141516171819202...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2016/10/05</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "crypto">crypto</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "python">python</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2016/10/03/crypto-rsa-3/" >
+            
+                <span>RSA（三）之小公钥指数攻击</span>
+        </a>
+        <div class="abstract-content">
+            下边来看一个场景：
+
+(e, n) = (3, 28891)c = 13153
+
+
+c≡m^3 modn
+
+
+m^3 = c + k * n
+
+
+m = ³√c+k*n
+
+我通过试k的值，当m为整数的时候，就可以求出m了。我这里使用了最差的情况，让step初始为2，步进为1.
+python实现python实现要使用gmpy2库，利用gmpy.iroot(a,b),理解为a开b次方，这个函数的返回值为一个(x,y)元组，其中x为结果值，y为一个bool型变量，如果x为整数，y=True,否则y=False。
+12345678910111213import gmpy2import binas...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2016/10/03</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "crypto">crypto</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "python">python</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2016/09/01/crypto-rsa-4/" >
             
                 <span>socket RSA加密通信</span>
@@ -1379,9 +1489,43 @@ Accept-Charset：浏览器可以接受的...
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 48
+        Total : 50
         </div>
         <!-- search  -->
         
@@ -1394,6 +1538,16 @@ Accept-Charset：浏览器可以接受的...
     
     <div class="archive-year"> 2021 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/28</span><a class="archive-post-title" href= "/2021/05/28/App-8/" >Part8:App权限问题</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/28</span><a class="archive-post-title" href= "/2021/05/28/App-9/" >part9：隐私合规产品调研</a>
+        </li>
     
     
         <li class="archive-post-item">

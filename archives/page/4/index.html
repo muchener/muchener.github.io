@@ -356,6 +356,74 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2017/05/06/web-bootstrap-1/" >
+            
+                <span>bootstrap笔记</span>
+        </a>
+        <div class="abstract-content">
+            Bootstrap字体图标（Glyphicons）用法1&lt;xxx class=&quot;glyphicon glyphicon-xxxx&quot;&gt;
+常用图标
+glyphicon-user  用户
+glyphicon-home  home
+glyphicon-chevron-left &lt;
+glyphicon-chevron-right &gt;
+http://www.runoob.com/bootstrap/bootstrap-glyphicons.html
+
+导航栏切换手机适配123456&lt;button type=&quot;button&quot; cla...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2017/05/06</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "web">web</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2017/02/16/life-hello-goodbye/" >
+            
+                <span>你好！再见！</span>
+        </a>
+        <div class="abstract-content">
+            转眼间5个月的实习就要结束了，对照起从去年这个时候的自己，有成长、有辛酸、有不足。
+信息安全，第一次听这个词是男朋友高考前考西电自招当时和我聊天才知道有这么个专业的，于是所有学校的第一志愿就都是它了。天不从人愿，高考失利，虽然是大学一个信息安全专业的学生，但是大二下之前没有接学过一些专业相关的知识。大二下才恍然意识过来“上学的意义”到底是什么，感觉已经真的晚了。
+那以后才开始学些东西(当时在学生会活动太忙时间好少)，虽然技术很渣，但是应该是妹子比较好装傻卖萌，所以交到了不少朋友，原来只有两个黑阔的朋友圈现在再也不敢随随便便发自拍了。总会有好人送票，所以偶尔去参加个安全(面基)会议，还认识...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2017/02/16</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "life">life</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2017/01/28/da-shumo-2/" >
             
                 <span>数模笔记：差分方程</span>
@@ -619,116 +687,6 @@ AT&amp;T: 在寄存器名之前需要写一个百分号(%)并且在数字前面�
             <div class= abstract-tags >
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "os">os</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2016/10/05/crypto-rsa-2/" >
-            
-                <span>RSA（二）之共模攻击</span>
-        </a>
-        <div class="abstract-content">
-            共模攻击原理
-n：大质数pq乘积
-
-
-m：明文
-
-
-d1：A的私钥
-
-
-d2：B的私钥
-
-
-c1：发给A的密文
-
-
-c2：发给B的密文
-
-
-e1：加密明文m的公钥（发给A）
-
-
-e2：加密明文m的公钥（发给B）
-
-加密过程c1=(m^e1)%n
-c2=(m^e2)%n
-解密过程A：m=(c1^d1)%n
-B：m=(c2^d2)%n
-共模攻击数学原理gcd(e1,e2)  = 1
-根据扩展欧几里得求出下边式子的一组解（s1，s2）
-
-根据公式我们可知道，我们只需要求出一组（s1,s2）即可计算出明文。
-找到了一个很不错的脚本
-12345678910111213141516171819202...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2016/10/05</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "crypto">crypto</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "python">python</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2016/10/03/crypto-rsa-3/" >
-            
-                <span>RSA（三）之小公钥指数攻击</span>
-        </a>
-        <div class="abstract-content">
-            下边来看一个场景：
-
-(e, n) = (3, 28891)c = 13153
-
-
-c≡m^3 modn
-
-
-m^3 = c + k * n
-
-
-m = ³√c+k*n
-
-我通过试k的值，当m为整数的时候，就可以求出m了。我这里使用了最差的情况，让step初始为2，步进为1.
-python实现python实现要使用gmpy2库，利用gmpy.iroot(a,b),理解为a开b次方，这个函数的返回值为一个(x,y)元组，其中x为结果值，y为一个bool型变量，如果x为整数，y=True,否则y=False。
-12345678910111213import gmpy2import binas...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2016/10/03</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "crypto">crypto</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "python">python</a>
     
 </div>
             
@@ -1479,9 +1437,43 @@ python实现python实现要使用gmpy2库，利用gmpy.iroot(a,b),理解为a开b
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 48
+        Total : 50
         </div>
         <!-- search  -->
         
@@ -1494,6 +1486,16 @@ python实现python实现要使用gmpy2库，利用gmpy.iroot(a,b),理解为a开b
     
     <div class="archive-year"> 2021 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/28</span><a class="archive-post-title" href= "/2021/05/28/App-8/" >Part8:App权限问题</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/28</span><a class="archive-post-title" href= "/2021/05/28/App-9/" >part9：隐私合规产品调研</a>
+        </li>
     
     
         <li class="archive-post-item">
