@@ -356,6 +356,88 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2021/06/04/%E5%8A%A0%E5%AF%86%E5%AD%98%E5%82%A8%E6%96%B9%E6%A1%88/" >
+            
+                <span>读书笔记-企业信息安全管理从0到1——加密存储方案</span>
+        </a>
+        <div class="abstract-content">
+            需要解密还原的数据——3种典型场景的存储加密方案。
+场景1：线上服务实施存储的的敏感字段信息
+
+敏感字段采用AES256算法加密
+密钥保管于特定文件，由负责该系统发布的运维人员生成并代填
+禁止开发和运维人员申请和使用与敏感字段密文相关的数据库权限
+为线上服务容器和密钥文件设置单独的运行账户和权限，禁止开发人员和数据库管理员申请和使用该权限
+针对相关权限、密钥文件和数据密文建立操作监控和审计能力
+
+场景2：敏感数据备份文件加密
+
+由负责备份恢复的运维人员生成-对RSA2048公私钥，私钥由其自己保管。
+备份脚本随机生成AES256密钥，并使用RSA2048公钥加密AES256密钥，RSA2...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/06/04</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "安全管理">安全管理</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2021/06/02/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B01/" >
+            
+                <span>读书笔记-企业信息安全管理从0到1</span>
+        </a>
+        <div class="abstract-content">
+            这本书讲得其实很细，很0，很适合接触安全面不宽、时间不长的从业者，根据自己的工作做了一点点笔记。
+如何要HC？其实我一直觉得准备好理由，比如工作计划、人力配置等是常规操作，但是对于一些初入职场不就的工作来说，这块还是欠缺的。
+
+做好工作计划表，人力配置最好精确到0.1
+对比往年的工作量，可以精准到人天，今年的工作量增加在哪？人力配置为什么多要？
+分析目前的形式，对领导可能问的问题有准备
+
+SRC作用
+多招一个安全工程师的成本远大于开设SRC发放奖励，并且SRC是按结果付费
+众人拾柴火焰高
+其实还有漏洞发散吧，自己总比外人了解业务，类比提前发现，减少支出。（不过这不带表内部已知）
+
+SRC...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/06/02</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "安全管理">安全管理</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2021/05/28/App-8/" >
             
                 <span>App安全合规-Part8:App权限问题</span>
@@ -1339,9 +1421,43 @@ App治理小组发布的问题详情...
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 50
+        Total : 52
         </div>
         <!-- search  -->
         
@@ -1354,6 +1470,16 @@ App治理小组发布的问题详情...
     
     <div class="archive-year"> 2021 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/04</span><a class="archive-post-title" href= "/2021/06/04/%E5%8A%A0%E5%AF%86%E5%AD%98%E5%82%A8%E6%96%B9%E6%A1%88/" >读书笔记-企业信息安全管理从0到1——加密存储方案</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/02</span><a class="archive-post-title" href= "/2021/06/02/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B01/" >读书笔记-企业信息安全管理从0到1</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -1684,6 +1810,8 @@ App治理小组发布的问题详情...
         <span class="sidebar-tag-name" data-tags="PS"><span class="iconfont-archer">&#xe606;</span>PS</span>
     
         <span class="sidebar-tag-name" data-tags="php"><span class="iconfont-archer">&#xe606;</span>php</span>
+    
+        <span class="sidebar-tag-name" data-tags="安全管理"><span class="iconfont-archer">&#xe606;</span>安全管理</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>

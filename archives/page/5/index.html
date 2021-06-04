@@ -356,6 +356,74 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2016/11/01/note-of-assembly/" >
+            
+                <span>汇编学习笔记</span>
+        </a>
+        <div class="abstract-content">
+            cfl的作用是出现异常时stack的回滚，而回滚的过程是一级级cfa往上回退，直到异常被catch。
+leaoffset取偏移地址
+leave释放当前子程序在堆栈中的局部变量,使BP和SP恢复成最近一次的ENTER指令被执行前的值。
+相当于：mov esp,ebp              pop ebp
+movzx将源操作数取出来,然后置于目的操作数,目的操作数其余位用0填充
+test al,al将设置ZF标记位为0
+MCNS翻转所有位
+在Intel语法中：   
+(UNIX)在AT&amp;T语法中：  
+AT&amp;T: 在寄存器名之前需要写一个百分号(%)并且在数字前面需要美元...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2016/11/01</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "bin">bin</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2016/10/28/os-fcfs/" >
+            
+                <span>操作系统FCFS调度算法</span>
+        </a>
+        <div class="abstract-content">
+            FCFS(First Come,First Served)调度算法，进程按照到达时间依次进入内存中的进程队列，然后按照“队列”（先进先出）的处理方法。操作系统第一次上机作业，简单实现了下。
+123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596#include &lt;stdio....
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2016/10/28</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "os">os</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2016/10/05/crypto-rsa-2/" >
             
                 <span>RSA（二）之共模攻击</span>
@@ -684,71 +752,10 @@ Accept-Charset：浏览器可以接受的...
         </div>
     </article>
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2016/04/17/life-hello-world/" >
-            
-                <span>hello world</span>
-        </a>
-        <div class="abstract-content">
-            hello-world!
-生日礼物是一个blog。
-
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2016/04/17</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "life">life</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2016/04/04/crypto-Virginia/" >
-            
-                <span>维吉尼亚的破解</span>
-        </a>
-        <div class="abstract-content">
-            首先要说一句，这是我第一次用python coding，所以很多地方都不太懂，吐槽自己竟然用sum当变量名，之后有用sum()函数，然后报了错还不知道为什么。不知道用ascii码要做chr()转化，等等，还比如在重合指数函数和拟重合函数中可以提炼出一个共同的函数，但是我写完重合指数才发现，越改越乱所以就算了吧。但是我终于还是写完了，应该比C语言的代码少个几百行吧，我是不会说这篇文章，我从开始看原理到敲代码写了一天多。
-多表代换密码体制的分析方法主要分为三步：第一步确定秘钥长度，常用的方法有卡西斯基（Kasiski）测试法和重合指数法（Index of Coincidence）;第二步就是...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2016/04/04</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "crypto">crypto</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
     <!-- paginator  -->
     
     <nav class="page-nav">
-        <a class="extend prev" rel="prev" href="/archives/page/4/">&lt; PREV</a><a class="page-number" href="/archives/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/3/">3</a><a class="page-number" href="/archives/page/4/">4</a><span class="page-number current">5</span>
+        <a class="extend prev" rel="prev" href="/archives/page/4/">&lt; PREV</a><a class="page-number" href="/archives/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/3/">3</a><a class="page-number" href="/archives/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/archives/page/6/">6</a><a class="extend next" rel="next" href="/archives/page/6/">NEXT &gt;</a>
     </nav>
     
 </main>
@@ -1523,9 +1530,43 @@ Accept-Charset：浏览器可以接受的...
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 50
+        Total : 52
         </div>
         <!-- search  -->
         
@@ -1538,6 +1579,16 @@ Accept-Charset：浏览器可以接受的...
     
     <div class="archive-year"> 2021 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/04</span><a class="archive-post-title" href= "/2021/06/04/%E5%8A%A0%E5%AF%86%E5%AD%98%E5%82%A8%E6%96%B9%E6%A1%88/" >读书笔记-企业信息安全管理从0到1——加密存储方案</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/02</span><a class="archive-post-title" href= "/2021/06/02/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B01/" >读书笔记-企业信息安全管理从0到1</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -1868,6 +1919,8 @@ Accept-Charset：浏览器可以接受的...
         <span class="sidebar-tag-name" data-tags="PS"><span class="iconfont-archer">&#xe606;</span>PS</span>
     
         <span class="sidebar-tag-name" data-tags="php"><span class="iconfont-archer">&#xe606;</span>php</span>
+    
+        <span class="sidebar-tag-name" data-tags="安全管理"><span class="iconfont-archer">&#xe606;</span>安全管理</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>

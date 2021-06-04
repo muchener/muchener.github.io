@@ -367,6 +367,88 @@ height:50vh;
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2021/06/04/%E5%8A%A0%E5%AF%86%E5%AD%98%E5%82%A8%E6%96%B9%E6%A1%88/" >
+            
+                <span>读书笔记-企业信息安全管理从0到1——加密存储方案</span>
+        </a>
+        <div class="abstract-content">
+            需要解密还原的数据——3种典型场景的存储加密方案。
+场景1：线上服务实施存储的的敏感字段信息
+
+敏感字段采用AES256算法加密
+密钥保管于特定文件，由负责该系统发布的运维人员生成并代填
+禁止开发和运维人员申请和使用与敏感字段密文相关的数据库权限
+为线上服务容器和密钥文件设置单独的运行账户和权限，禁止开发人员和数据库管理员申请和使用该权限
+针对相关权限、密钥文件和数据密文建立操作监控和审计能力
+
+场景2：敏感数据备份文件加密
+
+由负责备份恢复的运维人员生成-对RSA2048公私钥，私钥由其自己保管。
+备份脚本随机生成AES256密钥，并使用RSA2048公钥加密AES256密钥，RSA2...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/06/04</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "安全管理">安全管理</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2021/06/02/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B01/" >
+            
+                <span>读书笔记-企业信息安全管理从0到1</span>
+        </a>
+        <div class="abstract-content">
+            这本书讲得其实很细，很0，很适合接触安全面不宽、时间不长的从业者，根据自己的工作做了一点点笔记。
+如何要HC？其实我一直觉得准备好理由，比如工作计划、人力配置等是常规操作，但是对于一些初入职场不就的工作来说，这块还是欠缺的。
+
+做好工作计划表，人力配置最好精确到0.1
+对比往年的工作量，可以精准到人天，今年的工作量增加在哪？人力配置为什么多要？
+分析目前的形式，对领导可能问的问题有准备
+
+SRC作用
+多招一个安全工程师的成本远大于开设SRC发放奖励，并且SRC是按结果付费
+众人拾柴火焰高
+其实还有漏洞发散吧，自己总比外人了解业务，类比提前发现，减少支出。（不过这不带表内部已知）
+
+SRC...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/06/02</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "安全管理">安全管理</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2021/05/28/App-8/" >
             
                 <span>App安全合规-Part8:App权限问题</span>
@@ -596,11 +678,13 @@ App治理小组发布的问题详情...
 ↓↓↓↓↓↓
 2 需要解决漏洞争议、需要懂安全，需要处理漏洞闭环
 ↓↓↓↓↓↓
-3 多招一个安全工程师的成本远大于打造品牌影响力的目的除了本身的目的还有招聘安全人才需求
+3 多招一个安全工程师的成本大于SRC成本
+↓↓↓↓↓↓
+4 除了打造品牌影响力的目的还有招聘安全人才需求
 ↓↓↓↓↓↓
 5 推动安全方案的落地和改进，漏洞发散查漏补缺
 当然啦，可能各个SRC根据职能不同，还会做内部安全意识宣传及培训、等保合规等等工作。
-前边的作用，讲出来大家都懂，所以只想聊一聊5推动安全...
+前边的作用，讲出来大家都懂，所以只...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
@@ -658,80 +742,10 @@ App治理小组发布的问题详情...
         </div>
     </article>
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2018/10/31/SRC-4/" >
-            
-                <span>SRC小白成长日记——经验值(贡献值)与积分(安全币)功能对运营的帮助</span>
-        </a>
-        <div class="abstract-content">
-            
-这些天一直在纠结一个问题，偶然间在SRC伐木累群里提问请教了大佬们，感谢大佬们的认真回答，深受启发
-
-Question：经验值（贡献值）和积分（安全币）共存的意义是什么？
-如果二者共存，年终排名是按前者还是后者呢？
-贡献值和积分不等价，如果以贡献值做排名依据可能会流失高质量白帽子，增加平台低威胁漏洞数量。平台怎么平衡二者的关系
-例如：一个中危贡献值可能是3分，积分可能是30-60分，一个高危贡献值是5，积分是100-500
-Answer@ke贡献值来计算排名，只增不减，积分用来兑换的，他们会花掉吧~
-贡献值是对技术的肯定，钱是给白帽子的奖励。有可能不一样的，年终排名用贡献值。
-@fis...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/10/31</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "SRC">SRC</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2018/10/24/SRC-3/" >
-            
-                <span>SRC小白成日记——SRC线上漏洞活动</span>
-        </a>
-        <div class="abstract-content">
-            
-前两天一个SRC的妹子的方案让我感觉超级棒，于是有想法写了这篇文章。对于没有走向饱和期的SRC来说，KPI一般是漏洞数、漏洞质量、白帽子这些指标，促进达成这些指标的最有效的一个途径就是线上漏洞拉新活动。但是如今各家SRC双倍积分、三倍积分的活动已经成了常态，怎么在有限的资金和条件下想出好的活动方案成了各家SRC运营追求的目标。从各家SRC的活动来看，感觉JSRC、DSRC活动各种玩法，当然背后不知道要想多久，但毕竟这两家预算是相当的多！
-
-虽然，SRC那么多，活动那么多，但是无外乎分为两类：“自嗨”、”联动“。（早上下地铁路上突然冒出来的两个词汇，感觉很形象）。以下想法不考虑漏洞评级、...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/10/24</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "SRC">SRC</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
     <!-- paginator  -->
     
     <nav class="page-nav">
-        <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/">NEXT &gt;</a>
+        <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/">NEXT &gt;</a>
     </nav>
     
 </main>
@@ -1592,9 +1606,43 @@ Answer@ke贡献值来计算排名，只增不减，积分用来兑换的，他�
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 50
+        Total : 52
         </div>
         <!-- search  -->
         
@@ -1607,6 +1655,16 @@ Answer@ke贡献值来计算排名，只增不减，积分用来兑换的，他�
     
     <div class="archive-year"> 2021 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/04</span><a class="archive-post-title" href= "/2021/06/04/%E5%8A%A0%E5%AF%86%E5%AD%98%E5%82%A8%E6%96%B9%E6%A1%88/" >读书笔记-企业信息安全管理从0到1——加密存储方案</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/02</span><a class="archive-post-title" href= "/2021/06/02/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B01/" >读书笔记-企业信息安全管理从0到1</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -1937,6 +1995,8 @@ Answer@ke贡献值来计算排名，只增不减，积分用来兑换的，他�
         <span class="sidebar-tag-name" data-tags="PS"><span class="iconfont-archer">&#xe606;</span>PS</span>
     
         <span class="sidebar-tag-name" data-tags="php"><span class="iconfont-archer">&#xe606;</span>php</span>
+    
+        <span class="sidebar-tag-name" data-tags="安全管理"><span class="iconfont-archer">&#xe606;</span>安全管理</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
