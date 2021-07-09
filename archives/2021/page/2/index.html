@@ -23,7 +23,7 @@
     <meta name="description" content="一个什么都梦想的妹子！">
 <meta property="og:type" content="website">
 <meta property="og:title" content="muchener&#39;s blogs">
-<meta property="og:url" content="http://www.6do0.cn/tags/python/index.html">
+<meta property="og:url" content="http://www.6do0.cn/archives/2021/page/2/index.html">
 <meta property="og:site_name" content="muchener&#39;s blogs">
 <meta property="og:description" content="一个什么都梦想的妹子！">
 <meta property="og:locale">
@@ -356,139 +356,26 @@
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/2016/10/05/crypto-rsa-2/" >
+        <a class="abstract-title" href = "/2021/04/05/APP-1/" >
             
-                <span>RSA（二）之共模攻击</span>
+                <span>App安全合规 part1 App安全认证</span>
         </a>
         <div class="abstract-content">
-            共模攻击原理
-n：大质数pq乘积
-
-
-m：明文
-
-
-d1：A的私钥
-
-
-d2：B的私钥
-
-
-c1：发给A的密文
-
-
-c2：发给B的密文
-
-
-e1：加密明文m的公钥（发给A）
-
-
-e2：加密明文m的公钥（发给B）
-
-加密过程c1=(m^e1)%n
-c2=(m^e2)%n
-解密过程A：m=(c1^d1)%n
-B：m=(c2^d2)%n
-共模攻击数学原理gcd(e1,e2)  = 1
-根据扩展欧几里得求出下边式子的一组解（s1，s2）
-
-根据公式我们可知道，我们只需要求出一组（s1,s2）即可计算出明文。
-找到了一个很不错的脚本
-12345678910111213141516171819202...
+            
+近些年来各监管机构对于APP的监管越来越严格，企业对APP安全合规工作也来越重视。
+从2019年我负责跟进公司参与的App安全认证的试点工作到现在，已经接触App安全合规工作近两年了，非常感谢这两年一起推进工作的法务老师和同事，让我从一开始的连GB/T 35273都不知道，到之后的了解。虽然现在还是对很多状况不知所措的，但是已经有了基本的认知和处理方法。
+回想这两年，虽然自己推进App安全合规工作上一直还处于摸索阶段，但也有很多可以沉淀输出的东西，由于自己太懒一直在拖延，最近睡前（失眠）总在想一些自己对App安全合规治理和整改的想法和实践，所以想形成文章和各位对App安全合规治理感兴趣...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
             <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2016/10/05</span>
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/04/05</span>
             </div>
             <!-- tags  -->
             
             <div class= abstract-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "crypto">crypto</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "python">python</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2016/10/03/crypto-rsa-3/" >
-            
-                <span>RSA（三）之小公钥指数攻击</span>
-        </a>
-        <div class="abstract-content">
-            下边来看一个场景：
-
-(e, n) = (3, 28891)c = 13153
-
-
-c≡m^3 modn
-
-
-m^3 = c + k * n
-
-
-m = ³√c+k*n
-
-我通过试k的值，当m为整数的时候，就可以求出m了。我这里使用了最差的情况，让step初始为2，步进为1.
-python实现python实现要使用gmpy2库，利用gmpy.iroot(a,b),理解为a开b次方，这个函数的返回值为一个(x,y)元组，其中x为结果值，y为一个bool型变量，如果x为整数，y=True,否则y=False。
-12345678910111213import gmpy2import binas...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2016/10/03</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "crypto">crypto</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "python">python</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2016/09/01/crypto-rsa-4/" >
-            
-                <span>socket RSA加密通信</span>
-        </a>
-        <div class="abstract-content">
-            用python编写socket加密通信主要有两点，第一步是通过socket库实现socket通信，第二步将通信的内容使用pycrypto库进行RSA加解密操作。
-step1：socket通信原理图
-可能不是一个客户端在登录，所以我们这里使用多线程，确保客户端相互不干扰。
-下边是一个简单的聊天小程序。
-客户端1234567891011121314151617181920212223242526272829303132#-*-encoding:utf-8 -*-import socket,os,threadingclass RecvMsg(threading.Thread):    def ...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2016/09/01</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "crypto">crypto</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "python">python</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "App安全合规">App安全合规</a>
     
 </div>
             
@@ -496,6 +383,10 @@ step1：socket通信原理图
     </article>
     
     <!-- paginator  -->
+    
+    <nav class="page-nav">
+        <a class="extend prev" rel="prev" href="/archives/2021/">&lt; PREV</a><a class="page-number" href="/archives/2021/">1</a><span class="page-number current">2</span>
+    </nav>
     
 </main>
             <!-- profile -->
