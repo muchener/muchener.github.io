@@ -20,19 +20,25 @@
     <meta name="keywords" content="moench">
     
     <meta name="description" content="一个什么都梦想的妹子！">
-    <meta name="description" content="一个什么都梦想的妹子！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="muchener&#39;s blogs">
-<meta property="og:url" content="http://www.6do0.cn/tags/life/index.html">
+    <meta name="description" content="原文：https:&#x2F;&#x2F;www.freebuf.com&#x2F;articles&#x2F;compliance&#x2F;292914.html 市面上的隐私合规产品针对iOS的测试能力十分有限，下文是利用iOS15隐私新功能给大家提供一个简单又能解决一定问题的iOS下权限合规检测的方法。 本身没有任何技术含量，最近简单接触了下ios下的合规测试，记个流水账，希望有大佬可以提供更好的解决方案。 0 环境及工具环境：Mac、i">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iOS权限检测方法">
+<meta property="og:url" content="http://www.6do0.cn/2021/10/17/App-11/index.html">
 <meta property="og:site_name" content="muchener&#39;s blogs">
-<meta property="og:description" content="一个什么都梦想的妹子！">
+<meta property="og:description" content="原文：https:&#x2F;&#x2F;www.freebuf.com&#x2F;articles&#x2F;compliance&#x2F;292914.html 市面上的隐私合规产品针对iOS的测试能力十分有限，下文是利用iOS15隐私新功能给大家提供一个简单又能解决一定问题的iOS下权限合规检测的方法。 本身没有任何技术含量，最近简单接触了下ios下的合规测试，记个流水账，希望有大佬可以提供更好的解决方案。 0 环境及工具环境：Mac、i">
 <meta property="og:locale">
+<meta property="og:image" content="http://www.6do0.cn/2021/10/17/App-11/i1.png">
+<meta property="og:image" content="http://www.6do0.cn/2021/10/17/App-11/i2.jpeg">
+<meta property="article:published_time" content="2021-10-17T02:56:56.000Z">
+<meta property="article:modified_time" content="2021-10-27T08:01:25.608Z">
 <meta property="article:author" content="暮晨儿">
+<meta property="article:tag" content="App安全合规">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://www.6do0.cn/2021/10/17/App-11/i1.png">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     
-    <title>muchener&#39;s blogs</title>
+    <title>iOS权限检测方法 · muchener&#39;s blogs</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -213,12 +219,23 @@
 <meta name="generator" content="Hexo 5.4.0"></head>
 
     
+        <body class="post-body">
+    
     
 <header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >muchener&#39;s blogs</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">iOS权限检测方法</a>
+            </div>
+    </div>
     
     <a class="home-link" href=/>muchener's blogs</a>
 </header>
@@ -230,24 +247,74 @@
 
 
 
+
+height:50vh;
 ">
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
+            
+            iOS权限检测方法
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "App安全合规">App安全合规</a>
+    
+</div>
+                
+                
+                    <div class="post-intro-read">
+                        <span>字数统计: <span class="post-count word-count">931</span>阅读时长: <span class="post-count reading-time">3 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2021/10/17</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer">&#xe602;</span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -348,164 +415,102 @@
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2017/08/27/life-kcon2017/" >
-            
-                <span>与KCon一起的第二个年头</span>
-        </a>
-        <div class="abstract-content">
-            二〇一六
-日记：2016.8.31
-终于从参会者变成了一个组织者，首先必须要感谢雪姐的帮忙，没有她的帮助我也不可能成为志愿者。其次很高兴创宇的大家没有把我们当外人，kk把大会的所有流程都一五一十告诉了我们，包括很多前期的准备，让我们充分的了解一个活动从策划到实施的全过程，对以后我们做活动有很大的帮助，虽然那次开会过程很烦，但是作为一个组织过活动的我从中学到了很多，比如对于活动资料的整理啊，人员安排，甚至我还注意到他用的xmind思维导图软件回去下了用感觉好棒。
-其次呢就是26-28的会了，第一天，雪姐让我去开发票，本来以为一件如此简单的事，实际上楼上楼下跑了两三次，最后还因为专用发票跟普...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2017/08/27</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "life">life</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2017/05/31/life-sth-with-senior/" >
-            
-                <span>和学姐学长的两三事</span>
-        </a>
-        <div class="abstract-content">
-            又逢毕业季，昨天晚上躺床上翻来覆去，手机又没电，想了很多事。去年七月份认识了实验室的一对儿研三的研究生，跟学姐学长关系都很不错，和他们相处让我成长了很多。
-不要让自己活的很舒服
-学长很厉害，开始在某公司is部门实习，不过他一直想做大数据方向，所以并不想留下来后来面了几家甲方大公司都失败了。但是后来可能积累了面试经验，二月份面试很顺利，过了一家外企游戏公司，当时我真的好羡慕他啊，福利待遇相当好，自助午餐晚餐免费(烧鸡烤鸭烤羊腿)，冰激凌蛋糕和各种零食，升降桌，还有好多好多公司没有的福利。一直很羡慕很羡慕，做着自己喜欢的事，拿着不错的薪水，然而昨天晚上在问他，却和jd签了三方，当时我真的很不...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2017/05/31</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "life">life</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2017/05/31/life-welcome-to-june/" >
-            
-                <span>至即将到来的6月</span>
-        </a>
-        <div class="abstract-content">
-            总算要结束这紧张的五月了，这个月真的感觉身体被掏空，入党材料抄抄改改写了将近三万字，比赛被夹在中间那种说不出来的压迫感，还有就是掉进了王者荣耀的深坑里。终于在前天交了文档，材料也写的差不多了，终于可以闲下来了。这个月突然希望自己能文艺起来，已经开始在喜马拉雅上读书了，之后还希望自己能把在生活中读到的好文章也分享很大家，今天晚上我就下载了简书、好奇心日报和TED希望可以进行碎片化阅读提升一下文化素养。感觉大学这三年活的太自闭了，你要是现在问我几中全会，萨德(形政课听的)我一概不知，真的需要充电了。天天说要学习，可是从来没踏实下来过，没有一件事让自己做的满意，以后准备学学弟，学习时手机关机，...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2017/05/31</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "life">life</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2017/02/16/life-hello-goodbye/" >
-            
-                <span>你好！再见！</span>
-        </a>
-        <div class="abstract-content">
-            转眼间5个月的实习就要结束了，对照起从去年这个时候的自己，有成长、有辛酸、有不足。
-信息安全，第一次听这个词是男朋友高考前考西电自招当时和我聊天才知道有这么个专业的，于是所有学校的第一志愿就都是它了。天不从人愿，高考失利，虽然是大学一个信息安全专业的学生，但是大二下之前没有接学过一些专业相关的知识。大二下才恍然意识过来“上学的意义”到底是什么，感觉已经真的晚了。
-那以后才开始学些东西(当时在学生会活动太忙时间好少)，虽然技术很渣，但是应该是妹子比较好装傻卖萌，所以交到了不少朋友，原来只有两个黑阔的朋友圈现在再也不敢随随便便发自拍了。总会有好人送票，所以偶尔去参加个安全(面基)会议，还认识...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2017/02/16</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "life">life</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2016/04/17/life-hello-world/" >
-            
-                <span>hello world</span>
-        </a>
-        <div class="abstract-content">
-            hello-world!
-生日礼物是一个blog。
+            <main class="main post-page">
+    <article class="article-entry">
+        <p>原文：<a target="_blank" rel="noopener" href="https://www.freebuf.com/articles/compliance/292914.html">https://www.freebuf.com/articles/compliance/292914.html</a></p>
+<p>市面上的隐私合规产品针对iOS的测试能力十分有限，下文是利用iOS15隐私新功能给大家提供一个简单又能解决一定问题的iOS下权限合规检测的方法。</p>
+<p>本身没有任何技术含量，最近简单接触了下ios下的合规测试，记个流水账，希望有大佬可以提供更好的解决方案。</p>
+<h2 id="0-环境及工具"><a href="#0-环境及工具" class="headerlink" title="0 环境及工具"></a>0 环境及工具</h2><p>环境：Mac、iphone（iOS15.0及以上）</p>
+<p>Mac工具：Xcode、Apple Configurator 2</p>
+<p>iphone工具：隐私洞见</p>
+<h2 id="1-常见权限"><a href="#1-常见权限" class="headerlink" title="1 常见权限"></a>1 常见权限</h2><p><img src="/2021/10/17/App-11/i1.png" alt="i1"></p>
+<h2 id="2-info-plist-文件"><a href="#2-info-plist-文件" class="headerlink" title="2 info.plist 文件"></a>2 info.plist 文件</h2><h3 id="2-1-info-plist"><a href="#2-1-info-plist" class="headerlink" title="2.1 info.plist"></a>2.1 info.plist</h3><p>iOS应用和Android应用一样，权限列表都能在包里的文件中找到（Android：<code>AndroidManifest.xml</code>，iOS：<code>info.plist</code>）。但是iOS比Android贴心的地方在于苹果下对于权限调用的目的说明都在此文件里，对于<strong>安全合规人员审核调用权限的目的提供了便利</strong>。</p>
+<p><img src="/2021/10/17/App-11/i2.jpeg" alt="i2"></p>
+<p>上图中Value值就是获取权限弹窗中显示出来的内容（目的）。当然，很多时候因为功能变更导致有些权限不使用也在<code>info.plist</code>文件中声明，还是建议开发人员进行删除不使用的权限，避免检查过程中出现问题。</p>
+<h3 id="2-2-如何获取info-plist文件"><a href="#2-2-如何获取info-plist文件" class="headerlink" title="2.2 如何获取info.plist文件"></a>2.2 如何获取info.plist文件</h3><h4 id="2-2-1-有-ipa包"><a href="#2-2-1-有-ipa包" class="headerlink" title="2.2.1 有.ipa包"></a>2.2.1 有.ipa包</h4><p>如果是上线前测试，可以对接业务组打企业证书的ipa包，可以直接解压（解压后文件夹-payload文件夹-应用程序右键显示包内容），使用<strong>xcode</strong>打开info.plist文件即可。</p>
+<h4 id="2-2-2-没有ipa包"><a href="#2-2-2-没有ipa包" class="headerlink" title="2.2.2  没有ipa包"></a>2.2.2  没有ipa包</h4><p>合规同学在日常线上巡查时，为了不强打扰业务，可以通过<code>Apple Configurator 2</code>工具搞到ipa包。因为没办法放链接，可以搜Apple Configurator 2提取ipa文件<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_19484963/article/details/112284365%EF%BC%8C%E6%89%BE%E8%AF%A6%E7%BB%86%E6%96%B9%E6%B3%95%EF%BC%8C%E8%BF%99%E9%87%8C%E7%AE%80%E5%8D%95%E8%AF%B4%E4%B8%80%E4%B8%8B%E3%80%82">https://blog.csdn.net/qq_19484963/article/details/112284365，找详细方法，这里简单说一下。</a></p>
+<ul>
+<li><p>打开应用，连手机，登录Apple ID。</p>
+</li>
+<li><p>点击<strong>添加</strong>按钮，选择要测试的App（保证本机已安装）</p>
+</li>
+<li><p>弹出<strong>本机已存在xxxx的应用</strong>时，Finder打开如下路径，复制出来ipa：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~/Library/Group Containers/K36BKF7T3D.group.com.apple.configurator/Library/Caches/Assets/TemporaryItems/MobileApps/</span><br></pre></td></tr></table></figure></li>
+<li><p>按2.2.1的方式</p>
+</li>
+</ul>
+<h4 id="2-2-3-其他方式"><a href="#2-2-3-其他方式" class="headerlink" title="2.2.3 其他方式"></a>2.2.3 其他方式</h4><p>如果越狱了，应该可以用爱思助手什么的肯定是可以的。</p>
+<h2 id="3-权限使用情况"><a href="#3-权限使用情况" class="headerlink" title="3 权限使用情况"></a>3 权限使用情况</h2><h3 id="3-1-隐私洞见"><a href="#3-1-隐私洞见" class="headerlink" title="3.1 隐私洞见"></a>3.1 隐私洞见</h3><p>iOS15以上，也有了类似小米照明弹的功能，可以下载隐私洞见App，查看App的访问记录。网上也有很多关于网友也通过这个功能，曝光国民App滥用权限的新闻。</p>
+<p>使用方法：设置-隐私-记录App活动-存储App活动-导入到隐私洞见，即可即可查看</p>
+<h3 id="3-2-测试样例"><a href="#3-2-测试样例" class="headerlink" title="3.2 测试样例"></a>3.2 测试样例</h3><p>可以通过如下测试样例分别进行测试：</p>
+<ul>
+<li><p>同意前信息上传、权限使用情况</p>
+<ul>
+<li>下载app后，打开，不做后续操作，放置（可后台运行）</li>
+<li>查看是否有权限申请情况</li>
+<li>导出活动记录，查看是否有网络活动</li>
+</ul>
+</li>
+<li><p>权限使用频率</p>
+<ul>
+<li>同意隐私政策后，正常使用App一段时间</li>
+<li>导出活动记录，查看访问记录，评估权限使用频率</li>
+</ul>
+</li>
+<li><p>后台运行情况</p>
+<ul>
+<li>同意隐私政策后，登录App后，放置后台运行一段时间（记录后台放置时间点）</li>
+<li>导出活动记录，查看访问记录中，后台放置后是否有权限使用情况</li>
+</ul>
+</li>
+</ul>
+<h2 id="4-其他"><a href="#4-其他" class="headerlink" title="4 其他"></a>4 其他</h2><ul>
+<li>企业级证书ipa包怎么安装<ul>
+<li>扫码</li>
+<li>扫码装不上可以下ipa，用xcode装（window-Devices&amp;Simulators)</li>
+</ul>
+</li>
+<li>权限是否是基于场景触发<ul>
+<li>木办法，只能安装好，一步一步找到触发点。</li>
+</ul>
+</li>
+</ul>
 
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2016/04/17</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "life">life</a>
-    
-</div>
-            
-        </div>
     </article>
+    <!-- license  -->
     
     <!-- paginator  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href= "/2021/07/09/App-3/" title= "App安全合规—part3 SDK合规">
+                    <div class="prevTitle">App安全合规—part3 SDK合规</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
     
+    
+    <!-- gitalk评论 -->
+
+    <!-- utteranc评论 -->
+
+    <!-- partial('_partial/comment/changyan') -->
+    <!--PC版-->
+
+
+    
+    
+
+    <!-- 评论 -->
 </main>
             <!-- profile -->
             
@@ -579,6 +584,24 @@
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#0-%E7%8E%AF%E5%A2%83%E5%8F%8A%E5%B7%A5%E5%85%B7"><span class="toc-number">1.</span> <span class="toc-text">0 环境及工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%B8%B8%E8%A7%81%E6%9D%83%E9%99%90"><span class="toc-number">2.</span> <span class="toc-text">1 常见权限</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-info-plist-%E6%96%87%E4%BB%B6"><span class="toc-number">3.</span> <span class="toc-text">2 info.plist 文件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-info-plist"><span class="toc-number">3.1.</span> <span class="toc-text">2.1 info.plist</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96info-plist%E6%96%87%E4%BB%B6"><span class="toc-number">3.2.</span> <span class="toc-text">2.2 如何获取info.plist文件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-1-%E6%9C%89-ipa%E5%8C%85"><span class="toc-number">3.2.1.</span> <span class="toc-text">2.2.1 有.ipa包</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-2-%E6%B2%A1%E6%9C%89ipa%E5%8C%85"><span class="toc-number">3.2.2.</span> <span class="toc-text">2.2.2  没有ipa包</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-3-%E5%85%B6%E4%BB%96%E6%96%B9%E5%BC%8F"><span class="toc-number">3.2.3.</span> <span class="toc-text">2.2.3 其他方式</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E6%9D%83%E9%99%90%E4%BD%BF%E7%94%A8%E6%83%85%E5%86%B5"><span class="toc-number">4.</span> <span class="toc-text">3 权限使用情况</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E9%9A%90%E7%A7%81%E6%B4%9E%E8%A7%81"><span class="toc-number">4.1.</span> <span class="toc-text">3.1 隐私洞见</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E6%B5%8B%E8%AF%95%E6%A0%B7%E4%BE%8B"><span class="toc-number">4.2.</span> <span class="toc-text">3.2 测试样例</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%85%B6%E4%BB%96"><span class="toc-number">5.</span> <span class="toc-text">4 其他</span></a></li></ol>
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -1827,6 +1850,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
      
     </body>
 </html>
